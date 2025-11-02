@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import ArrowButton from '../components/ArrowButton'
 import Accordion from '../components/Accordion'
+import Footer from '../components/Footer'
 import './About.css'
 
 function About() {
@@ -132,6 +133,8 @@ function About() {
           ]} />
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }
