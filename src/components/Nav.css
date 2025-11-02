@@ -1,9 +1,19 @@
 .main-nav {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
   padding: 2rem;
   background-color: transparent;
+}
+
+.nav-logo {
+  height: 30px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
 }
 
 .main-nav a {

@@ -112,6 +112,42 @@ function About() {
           </div>
         </div>
       </div>
+
+      <div className="faq-section">
+        <h2>FREQUENTLY ASKED <br></br>QUESTIONS</h2>
+
+        <div className="faq-container">
+          <details className="faq-item">
+            <summary>What does CaliTech Solutions do?</summary>
+            <p>Content goes here</p>
+          </details>
+
+          <details className="faq-item">
+            <summary>Do you offer on-call or emergency IT services?</summary>
+            <p>Content goes here</p>
+          </details>
+
+          <details className="faq-item">
+            <summary>What types of businesses do you work with?</summary>
+            <p>Content goes here</p>
+          </details>
+
+          <details className="faq-item">
+            <summary>What is included in your 30-Day Service Guarantee?</summary>
+            <p>Content goes here</p>
+          </details>
+
+          <details className="faq-item">
+            <summary>Do you provide remote support, or do you have to come onsite?</summary>
+            <p>Content goes here</p>
+          </details>
+
+          <details className="faq-item">
+            <summary>Do you handle cybersecurity and data protection?</summary>
+            <p>Content goes here</p>
+          </details>
+        </div>
+      </div>
     </>
   )
 }
