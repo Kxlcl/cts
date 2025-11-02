@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Nav from '../components/Nav'
 import ArrowButton from '../components/ArrowButton'
+import Accordion from '../components/Accordion'
 import './About.css'
 
 function About() {
@@ -117,35 +118,18 @@ function About() {
         <h2>FREQUENTLY ASKED <br></br>QUESTIONS</h2>
 
         <div className="faq-container">
-          <details className="faq-item">
-            <summary>What does CaliTech Solutions do?</summary>
-            <p>Content goes here</p>
-          </details>
-
-          <details className="faq-item">
-            <summary>Do you offer on-call or emergency IT services?</summary>
-            <p>Content goes here</p>
-          </details>
-
-          <details className="faq-item">
-            <summary>What types of businesses do you work with?</summary>
-            <p>Content goes here</p>
-          </details>
-
-          <details className="faq-item">
-            <summary>What is included in your 30-Day Service Guarantee?</summary>
-            <p>Content goes here</p>
-          </details>
-
-          <details className="faq-item">
-            <summary>Do you provide remote support, or do you have to come onsite?</summary>
-            <p>Content goes here</p>
-          </details>
-
-          <details className="faq-item">
-            <summary>Do you handle cybersecurity and data protection?</summary>
-            <p>Content goes here</p>
-          </details>
+          <Accordion items={[
+            { question: "What does CaliTech Solutions do?", answer: "CaliTech Solutions provides full-service IT support for small and medium-sized businesses. We handle everything from hardware installation and software setup to network design, cybersecurity, and data protection. Whether you need emergency assistance or long-term IT management, we ensure your technology performs reliably and efficiently." },
+            { question: "Do you offer on-call or emergency IT services?", answer: "Yes. We specialize in on-call IT support for businesses that need immediate technical assistance. Our technicians can provide remote or onsite support to resolve urgent issues quickly and minimize downtime." },
+            { question: "What types of businesses do you work with?", answer: "We work with a wide range of industries, including private security, logistics, professional services, retail, and industrial operations. Our services are customized to meet the specific technology requirements of each business." },
+            { question: "What is included in your 30-Day Service Guarantee?", answer: "All of our work is backed by a 30-Day Service Guarantee. If any issue arises as a result of our service within 30 days of completion, we will correct it at no additional cost. Our goal is to ensure lasting reliability and complete client satisfaction." },
+            { question: "Do you provide remote support, or do you have to come onsite?", answer: "We offer both. Many issues can be resolved remotely using secure access tools, but for hardware, networking, or infrastructure problems, we also provide onsite visits throughout Bakersfield and nearby areas." },
+            { question: "Do you handle cybersecurity and data protection?", answer: "Yes. We provide comprehensive cybersecurity solutions including firewall configuration, system monitoring, data backups, and recovery plans. We also help clients develop secure data handling practices and maintain compliance with industry standards." },
+            { question: "Can you help our company move or relocate our technology to a new location?", answer: "Yes. We provide complete IT relocation services to ensure a smooth transition when your business moves to a new facility. Our team can plan, disconnect, transport, and reconfigure your equipment, servers, and network systems so everything is fully operational in the new location with minimal downtime." },
+            { question: "Can you help us move to the cloud?", answer: "Absolutely. We set up and manage Microsoft 365, Google Workspace, and other secure cloud platforms. We also handle data migration and user training to ensure your team can work efficiently from anywhere." },
+            { question: "Do you offer contracts or one-time services?", answer: "We offer both. Businesses can hire us for one-time support or choose an ongoing service agreement for continuous monitoring, maintenance, and priority response." },
+            { question: "How can I schedule service or request a quote?", answer: "You can contact us directly by phone at (661) 805-6123 or by email at support@calitech-solutions.com. You can also fill out the contact form on our website. We respond to most inquiries within one business day." }
+          ]} />
         </div>
       </div>
     </>
