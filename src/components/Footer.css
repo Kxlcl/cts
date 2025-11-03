@@ -1,15 +1,14 @@
 .main-footer {
-  background: #435663;
-  padding: 3rem 2rem;
+  padding: 4rem 4rem;
 }
 
 .footer-content {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .footer-logo {
@@ -17,12 +16,12 @@
 }
 
 .footer-logo img {
-  height: 80px;
+  height: 60px;
   width: auto;
 }
 
 .footer-section {
-  flex: 1;
+  flex-shrink: 0;
 }
 
 .footer-section h3 {

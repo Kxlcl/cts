@@ -13,9 +13,9 @@
 }
 
 .accordion-header {
-  padding: 2rem;
+  padding: 1.5rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -27,6 +27,8 @@
   font-size: 2rem;
   font-weight: 700;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .accordion-item.open .accordion-icon {
@@ -40,7 +42,23 @@
 }
 
 .accordion-content-inner {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .accordion-icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .accordion-content-inner {
+    padding: 0 1rem 1rem 1rem;
+  }
 }
 
 .accordion-content-inner p {
