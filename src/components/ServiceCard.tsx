@@ -11,7 +11,7 @@ interface ServiceCardProps {
   sidebarColor?: string;
 }
 
-function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, totalPages, onNext, sidebarColor = '#A4C8E1' }: ServiceCardProps) {
+function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, onNext, sidebarColor = '#A4C8E1' }: ServiceCardProps) {
   return (
     <div className="service-card-wrapper">
       <div className="service-card-sidebar sidebar-desktop" style={{ backgroundColor: sidebarColor }}>
