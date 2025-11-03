@@ -42,7 +42,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Email configuration
-$to = 'support@calitech-solutions.com'; // Replace with your business email
+$to = 'nyanoctupus123@gmail.com'; // Test email
 $subject = 'New Contact Form Submission - ' . $inquiryType;
 
 // Email body

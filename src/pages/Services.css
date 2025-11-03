@@ -1,0 +1,141 @@
+.services-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-hero .hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-hero .hero-title {
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 0.8;
+  letter-spacing: -18px;
+  text-align: center;
+  margin: 0;
+  color: #000;
+}
+
+.service-carousel {
+  padding: 4rem 0;
+}
+
+.service-card-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-card-content {
+  max-width: 1400px;
+  width: 100%;
+  padding-right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carousel-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #FFCC7A;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.carousel-button:first-child img {
+  transform: rotate(90deg);
+}
+
+.carousel-button:last-child img {
+  transform: rotate(-90deg);
+}
+
+.carousel-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 1rem;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #FFCC7A;
+}
+
+.section-title-container {
+  text-align: right;
+}
+
+.section-title {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .services-hero .hero-title {
+    font-size: 6rem;
+    letter-spacing: -12px;
+  }
+
+  .service-card-section {
+    padding: 2rem 0;
+  }
+
+  .service-card-content {
+    padding-left: 2rem;
+  }
+
+  .service-card-sidebar {
+    display: none;
+  }
+
+  .service-card-image {
+    width: 80%;
+    height: 300px;
+  }
+
+  .section-title-container {
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+}
