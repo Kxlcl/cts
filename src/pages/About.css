@@ -39,6 +39,7 @@
   margin: 0;
   z-index: 1;
   white-space: nowrap;
+  color: #000;
 }
 
 .hero-image {
