@@ -7,8 +7,11 @@
 .services-hero .hero-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: 4rem 2rem;
 }
 
 .services-hero .hero-title {
@@ -17,6 +20,25 @@
   line-height: 0.8;
   letter-spacing: -18px;
   text-align: center;
+  margin: 0;
+  color: #000;
+}
+
+.guarantee-text {
+  max-width: 1200px;
+  text-align: left;
+}
+
+.guarantee-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  color: #000;
+}
+
+.guarantee-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin: 0;
   color: #000;
 }
@@ -101,7 +123,7 @@
 
 .section-title {
   font-size: 8rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
   color: #000;
@@ -137,5 +159,13 @@
 
   .section-title {
     font-size: 4rem;
+  }
+
+  .guarantee-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .guarantee-text p {
+    font-size: 1rem;
   }
 }
