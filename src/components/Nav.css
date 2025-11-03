@@ -44,6 +44,18 @@
 
 @media (max-width: 768px) {
   .main-nav {
-    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+
+  .nav-logo {
+    height: 24px;
   }
 }
