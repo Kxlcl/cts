@@ -130,7 +130,7 @@ function Contact() {
           <div className="submit-container">
             <p>SUBMIT</p>
             <button type="submit" className="submit-button">
-              <img src="/down_arrow.png" alt="Submit" />
+              <img src="/images/down_arrow.png" alt="Submit" />
             </button>
           </div>
 

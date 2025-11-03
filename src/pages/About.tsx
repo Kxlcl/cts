@@ -30,12 +30,12 @@ function About() {
             <p className="hero-title">CALITECH <br></br>SOLUTIONS</p>
 
             <div className="hero-image">
-              <img src="/about_image.png" alt="Beach scene" />
+              <img src="/images/about_image.png" alt="Beach scene" />
             </div>
           </div>
 
           <button className="scroll-button" onClick={scrollToWhatWeDo}>
-            <img src="/down_arrow.png" alt="Scroll down" />
+            <img src="/images/down_arrow.png" alt="Scroll down" />
           </button>
 
           <div className="hero-text">
@@ -66,7 +66,7 @@ function About() {
           </div>
 
           <div className="about-image">
-            <img src="/home1.jpg" alt="City view" />
+            <img src="/images/home1.jpg" alt="City view" />
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ function About() {
       <div className="about-section reverse">
         <div className="about-content">
           <div className="about-image">
-            <img src="/home2.png" alt="About image" />
+            <img src="/images/home2.png" alt="About image" />
           </div>
 
           <div className="about-text">
@@ -86,23 +86,23 @@ function About() {
 
             <ul className="about-list">
               <li>
-                <img src="/check_mark.png" alt="Check" />
+                <img src="/images/check_mark.png" alt="Check" />
                 <span>Locally owned and operated in <strong>Bakersfield, CA</strong></span>
               </li>
               <li>
-                <img src="/check_mark.png" alt="Check" />
+                <img src="/images/check_mark.png" alt="Check" />
                 <span>Fast, responsive on-call IT support</span>
               </li>
               <li>
-                <img src="/check_mark.png" alt="Check" />
+                <img src="/images/check_mark.png" alt="Check" />
                 <span><strong>30-day service guarantee</strong> on all completed work</span>
               </li>
               <li>
-                <img src="/check_mark.png" alt="Check" />
+                <img src="/images/check_mark.png" alt="Check" />
                 <span>Experienced technicians with real-world problem-solving</span>
               </li>
               <li>
-                <img src="/check_mark.png" alt="Check" />
+                <img src="/images/check_mark.png" alt="Check" />
                 <span>Transparent pricing and <strong>no surprise fees</strong></span>
               </li>
             </ul>
