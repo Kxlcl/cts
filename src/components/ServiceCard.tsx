@@ -3,7 +3,6 @@ import './ServiceCard.css'
 interface ServiceCardProps {
   title: string;
   description: string;
-  subtitle?: string;
   bulletPoints: string[];
   imageUrl: string;
   currentPage: number;
@@ -11,7 +10,7 @@ interface ServiceCardProps {
   onNext: () => void;
 }
 
-function ServiceCard({ title, description, subtitle, bulletPoints, imageUrl, currentPage, totalPages, onNext }: ServiceCardProps) {
+function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, totalPages, onNext }: ServiceCardProps) {
   return (
     <div className="service-card-wrapper">
       <div className="service-card-sidebar">
@@ -24,7 +23,6 @@ function ServiceCard({ title, description, subtitle, bulletPoints, imageUrl, cur
         <img src={imageUrl} alt={title} />
         <div className="service-card-overlay">
           <h2 className="service-card-title">{title}</h2>
-          {subtitle && <p className="service-card-subtitle">{subtitle}</p>}
           <p className="service-card-description">{description}</p>
           <ul className="service-card-bullets">
             {bulletPoints.map((point, index) => (

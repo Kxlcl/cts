@@ -51,7 +51,7 @@ function Services() {
         <Nav />
         <div className="hero-content">
           <h1 className="hero-title">SERVICES</h1>
-          <p>All services include our 30-Day Service Guarantee — if an issue arises from our work within 30 days, we’ll fix it at no additional charge.</p>
+          <p className="guarantee-text">All services include our 30-Day Service Guarantee. <br></br>If an issue arises from our work within 30 days, we’ll fix it at no additional charge.</p>
         </div>
       </div>
 

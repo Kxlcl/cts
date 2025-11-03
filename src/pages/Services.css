@@ -1,7 +1,8 @@
 .services-hero {
-  min-height: 50vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .services-hero .hero-content {
@@ -26,23 +27,8 @@
 
 .guarantee-text {
   max-width: 1200px;
-  text-align: left;
+  text-align: center;
 }
-
-.guarantee-text h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0 0 1rem 0;
-  color: #000;
-}
-
-.guarantee-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 0;
-  color: #000;
-}
-
 
 .section-title-container {
   display: flex;
