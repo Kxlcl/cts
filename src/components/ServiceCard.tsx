@@ -8,12 +8,13 @@ interface ServiceCardProps {
   currentPage: number;
   totalPages: number;
   onNext: () => void;
+  sidebarColor?: string;
 }
 
-function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, totalPages, onNext }: ServiceCardProps) {
+function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, totalPages, onNext, sidebarColor = '#A4C8E1' }: ServiceCardProps) {
   return (
     <div className="service-card-wrapper">
-      <div className="service-card-sidebar">
+      <div className="service-card-sidebar" style={{ backgroundColor: sidebarColor }}>
         <div className="sidebar-page-number">{currentPage}</div>
         <button className="sidebar-next-button" onClick={onNext}>
           <img src="/images/down_arrow.png" alt="Next" />

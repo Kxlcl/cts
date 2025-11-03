@@ -30,6 +30,24 @@
   text-align: center;
 }
 
+.service-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.service-card-section {
+  position: relative;
+  width: 100%;
+}
+
+.service-card-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
 .section-title-container {
   display: flex;
   align-items: flex-end;
