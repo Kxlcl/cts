@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ServiceCard from '../components/ServiceCard'
@@ -107,6 +107,7 @@ function Services() {
   const [softwareIndex, setSoftwareIndex] = useState(0)
   const [hardwareIndex, setHardwareIndex] = useState(0)
   const [informationIndex, setInformationIndex] = useState(0)
+  const observerRef = useRef<IntersectionObserver | null>(null)
 
   const handleSoftwareNext = () => {
     setSoftwareIndex((prev) => (prev === softwareServices.length - 1 ? 0 : prev + 1))
@@ -120,22 +121,44 @@ function Services() {
     setInformationIndex((prev) => (prev === informationServices.length - 1 ? 0 : prev + 1))
   }
 
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const elements = document.querySelectorAll('.fade-in-scroll')
+    elements.forEach((el) => observerRef.current?.observe(el))
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
+    }
+  }, [])
+
   return (
     <>
       <div className="services-hero">
         <Nav />
-        <div className="hero-content">
+        <div className="hero-content fade-in-scroll">
           <h1 className="hero-title">SERVICES</h1>
-          <p className="guarantee-text">All services include our 30-Day Service Guarantee. <br></br>If an issue arises from our work within 30 days, we’ll fix it at no additional charge.</p>
+          <p className="guarantee-text">All services include our 30-Day Service Guarantee. <br></br>If an issue arises from our work within 30 days, we'll fix it at no additional charge.</p>
         </div>
       </div>
 
-      <div className="section-title-container">
+      <div className="section-title-container fade-in-scroll">
         <h2 className="section-title">SOFTWARE</h2>
         <p className="section-subtitle">Modern solutions to keep your business running efficiently and SECURELY!</p>
       </div>
 
-      <div className="service-carousel">
+      <div className="service-carousel fade-in-scroll">
         <div className="service-card-section">
           <div className="service-card-content">
             <ServiceCard
@@ -152,12 +175,12 @@ function Services() {
         </div>
       </div>
 
-      <div className="section-title-container">
+      <div className="section-title-container fade-in-scroll">
         <h2 className="section-title">HARDWARE</h2>
         <p className="section-subtitle">Dependable setup, installation, and maintenance for all your business tech!</p>
       </div>
 
-      <div className="service-carousel">
+      <div className="service-carousel fade-in-scroll">
         <div className="service-card-section">
           <div className="service-card-content">
             <ServiceCard
@@ -175,12 +198,12 @@ function Services() {
         </div>
       </div>
 
-      <div className="section-title-container">
+      <div className="section-title-container fade-in-scroll">
         <h2 className="section-title">INFO BASED SERVICES</h2>
         <p className="section-subtitle">Guidance, analysis, and management of your company's IT environment!</p>
       </div>
 
-      <div className="service-carousel">
+      <div className="service-carousel fade-in-scroll">
         <div className="service-card-section">
           <div className="service-card-content">
             <ServiceCard

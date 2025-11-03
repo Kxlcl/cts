@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import './Contact.css'
@@ -12,6 +12,7 @@ function Contact() {
     message: ''
   });
   const [status, setStatus] = useState('');
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -50,16 +51,38 @@ function Contact() {
     }
   };
 
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.fade-in-scroll');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="contact-hero">
         <Nav />
-        <div className="hero-content">
+        <div className="hero-content fade-in-scroll">
           <h1 className="hero-title">CONTACT US</h1>
         </div>
       </div>
 
-      <div className="contact-form-section">
+      <div className="contact-form-section fade-in-scroll">
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>FULL NAME</label>

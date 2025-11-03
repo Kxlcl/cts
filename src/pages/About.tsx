@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import Nav from '../components/Nav'
 import ArrowButton from '../components/ArrowButton'
 import Accordion from '../components/Accordion'
@@ -7,6 +8,7 @@ import './About.css'
 
 function About() {
   const navigate = useNavigate();
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const scrollToWhatWeDo = () => {
     document.querySelector('.about-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -20,13 +22,35 @@ function About() {
     navigate('/contact');
   };
 
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.fade-in-scroll');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="about-hero">
         <Nav />
 
         <div className="hero-content">
-          <div className="hero-main">
+          <div className="hero-main fade-in-scroll">
             <p className="hero-title">CALITECH <br></br>SOLUTIONS</p>
 
             <div className="hero-image">
@@ -34,17 +58,17 @@ function About() {
             </div>
           </div>
 
-          <button className="scroll-button" onClick={scrollToWhatWeDo}>
+          <button className="scroll-button fade-in-scroll" onClick={scrollToWhatWeDo}>
             <img src="/images/down_arrow.png" alt="Scroll down" />
           </button>
 
-          <div className="hero-text">
+          <div className="hero-text fade-in-scroll">
             <p>CaliTech Solutions is a Bakersfield-based IT services provider dedicated to helping small and medium-sized businesses thrive through dependable, technical support.</p>
           </div>
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="about-section fade-in-scroll">
         <div className="about-content">
           <div className="about-text">
             <h2>WHAT WE DO</h2>
@@ -71,7 +95,7 @@ function About() {
         </div>
       </div>
 
-      <div className="about-section reverse">
+      <div className="about-section reverse fade-in-scroll">
         <div className="about-content">
           <div className="about-image">
             <img src="/images/home2.png" alt="About image" />
@@ -115,7 +139,7 @@ function About() {
         </div>
       </div>
 
-      <div className="faq-section">
+      <div className="faq-section fade-in-scroll">
         <h2>FREQUENTLY ASKED <br></br>QUESTIONS</h2>
 
         <div className="faq-container">
