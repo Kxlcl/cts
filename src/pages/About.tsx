@@ -34,13 +34,13 @@ function About() {
             </div>
           </div>
 
-          <div className="hero-text">
-            <p>CaliTech Solutions is a Bakersfield-based IT services provider dedicated to helping small and medium-sized businesses thrive through dependable, technical support.</p>
-          </div>
-
           <button className="scroll-button" onClick={scrollToWhatWeDo}>
             <img src="/down_arrow.png" alt="Scroll down" />
           </button>
+
+          <div className="hero-text">
+            <p>CaliTech Solutions is a Bakersfield-based IT services provider dedicated to helping small and medium-sized businesses thrive through dependable, technical support.</p>
+          </div>
         </div>
       </div>
 
