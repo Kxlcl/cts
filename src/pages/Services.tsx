@@ -14,7 +14,7 @@ const softwareServices = [
       'Malware and virus removal',
       'Operating system tuning and optimization'
     ],
-    imageUrl: '/images/service1.jpg'
+    imageUrl: '/images/software.png'
   },
   {
     title: 'CLOUD & DATA\nSERVICES',
@@ -25,7 +25,7 @@ const softwareServices = [
       'Cloud backups and synchronization',
       'File-sharing solutions for teams'
     ],
-    imageUrl: '/images/service2.jpg'
+    imageUrl: '/images/software.png'
   },
   {
     title: 'SOFTWARE SETUP FOR\nSECURITY OPERATIONS',
@@ -35,7 +35,7 @@ const softwareServices = [
       'Dispatch and reporting systems',
       'Patrol management apps for mobile devices'
     ],
-    imageUrl: '/images/service3.jpg'
+    imageUrl: '/images/software.png'
   }
 ]
 
@@ -48,7 +48,7 @@ const hardwareServices = [
       'Cabling and access point installation',
       'Secure Wi-Fi deployment'
     ],
-    imageUrl: '/images/service4.jpg'
+    imageUrl: '/images/hardware.png'
   },
   {
     title: 'SYSTEM MAINTENANCE\n& MONITORING',
@@ -57,7 +57,7 @@ const hardwareServices = [
       'Preventative maintenance',
       'Hardware diagnostics and performance tuning'
     ],
-    imageUrl: '/images/service5.jpg'
+    imageUrl: '/images/hardware.png'
   },
   {
     title: 'SECURITY HARDWARE\nINTEGRATION',
@@ -67,7 +67,7 @@ const hardwareServices = [
       'Access control hardware setup',
       'Patrol tablet/phone configuration'
     ],
-    imageUrl: '/images/service6.jpg'
+    imageUrl: '/images/hardware.png'
   }
 ]
 
@@ -80,7 +80,7 @@ const informationServices = [
       'Upgrade and migration planning',
       'Cybersecurity best-practice consulting'
     ],
-    imageUrl: '/images/service7.jpg'
+    imageUrl: '/images/info.png'
   },
   {
     title: 'DATA SECURITY &\nCOMPLIANCE GUIDANCE',
@@ -89,7 +89,7 @@ const informationServices = [
       'Data handling policies',
       'Security training for staff'
     ],
-    imageUrl: '/images/service8.jpg'
+    imageUrl: '/images/info.png'
   },
   {
     title: 'DOCUMENTATION\n& TRAINING',
@@ -99,7 +99,7 @@ const informationServices = [
       'Procedure documentation',
       'Technology onboarding sessions'
     ],
-    imageUrl: '/images/service9.jpg'
+    imageUrl: '/images/info.png'
   }
 ]
 
@@ -169,7 +169,7 @@ function Services() {
               currentPage={hardwareIndex + 1}
               totalPages={hardwareServices.length}
               onNext={handleHardwareNext}
-              sidebarColor="#FFCC7A"
+              sidebarColor="#f9e1ba"
             />
           </div>
         </div>
