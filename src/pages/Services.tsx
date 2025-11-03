@@ -7,6 +7,7 @@ import './Services.css'
 const softwareServices = [
   {
     title: 'ON CALL\nIT SUPPORT',
+    subtitle: 'Modern solutions to keep your business running efficiently and SECURELY!',
     description: 'Fast, reliable troubleshooting for all your software-related issues!',
     bulletPoints: [
       'Remote and onsite support',
@@ -21,6 +22,7 @@ const softwareServices = [
 const hardwareServices = [
   {
     title: 'NETWORK\nDESIGN & SETUP',
+    subtitle: 'Dependable setup, installation, and maintenance for all your business tech!',
     description: 'Build strong, secure, and efficient business networks!',
     bulletPoints: [
       'Router, switch, and firewall configuration',
@@ -53,11 +55,17 @@ function Services() {
         </div>
       </div>
 
+      <div className="section-title-container">
+        <h2 className="section-title">SOFTWARE</h2>
+        <p className="section-subtitle">Modern solutions to keep your business running efficiently and SECURELY!</p>
+      </div>
+
       <div className="service-carousel">
         <div className="service-card-section">
           <div className="service-card-content">
             <ServiceCard
               title={softwareServices[softwareIndex].title}
+              subtitle={softwareServices[softwareIndex].subtitle}
               description={softwareServices[softwareIndex].description}
               bulletPoints={softwareServices[softwareIndex].bulletPoints}
               imageUrl={softwareServices[softwareIndex].imageUrl}
@@ -70,7 +78,8 @@ function Services() {
       </div>
 
       <div className="section-title-container">
-        <h2 className="section-title">SOFTWARE</h2>
+        <h2 className="section-title">HARDWARE</h2>
+        <p className="section-subtitle">Dependable setup, installation, and maintenance for all your business tech!</p>
       </div>
 
       <div className="service-carousel">
@@ -78,6 +87,7 @@ function Services() {
           <div className="service-card-content">
             <ServiceCard
               title={hardwareServices[hardwareIndex].title}
+              subtitle={hardwareServices[hardwareIndex].subtitle}
               description={hardwareServices[hardwareIndex].description}
               bulletPoints={hardwareServices[hardwareIndex].bulletPoints}
               imageUrl={hardwareServices[hardwareIndex].imageUrl}
@@ -87,10 +97,6 @@ function Services() {
             />
           </div>
         </div>
-      </div>
-
-      <div className="section-title-container">
-        <h2 className="section-title">HARDWARE</h2>
       </div>
 
       <Footer />
