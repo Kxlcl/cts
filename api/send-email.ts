@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import nodemailer from 'nodemailer';
 
 export default async function handler(
   req: VercelRequest,
@@ -18,7 +19,6 @@ export default async function handler(
     }
 
     // Email configuration
-    const nodemailer = require('nodemailer');
 
     // Create transporter using Gmail
     const transporter = nodemailer.createTransport({
@@ -50,8 +50,11 @@ export default async function handler(
     await transporter.sendMail(mailOptions);
 
     return res.status(200).json({ success: true, message: 'Email sent successfully' });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    return res.status(500).json({
+      error: 'Failed to send email',
+      details: error.message
+    });
   }
 }
