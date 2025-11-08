@@ -6,7 +6,7 @@ function Nav() {
     <nav className="main-nav">
       <img src="/images/logo.png" alt="CaliTech Solutions" className="nav-logo" />
       <div className="nav-links">
-        <NavLink to="/about">ABOUT</NavLink>
+        <NavLink to="/">HOME</NavLink>
         <NavLink to="/services">SERVICES</NavLink>
         <NavLink to="/contact">CONTACT</NavLink>
       </div>

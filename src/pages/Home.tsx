@@ -4,14 +4,14 @@ import Nav from '../components/Nav'
 import ArrowButton from '../components/ArrowButton'
 import Accordion from '../components/Accordion'
 import Footer from '../components/Footer'
-import './About.css'
+import './Home.css'
 
-function About() {
+function Home() {
   const navigate = useNavigate();
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   const scrollToWhatWeDo = () => {
-    document.querySelector('.about-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.home-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const goToServices = () => {
@@ -46,7 +46,7 @@ function About() {
 
   return (
     <>
-      <div className="about-hero">
+      <div className="home-hero">
         <Nav />
 
         <div className="hero-content">
@@ -68,9 +68,9 @@ function About() {
         </div>
       </div>
 
-      <div className="about-section fade-in-scroll">
-        <div className="about-content">
-          <div className="about-text">
+      <div className="home-section fade-in-scroll">
+        <div className="home-content">
+          <div className="home-text">
             <h2>WHAT WE DO</h2>
 
             <p>We keep your tech alive — and your business thriving!</p>
@@ -89,26 +89,26 @@ function About() {
             </div>
           </div>
 
-          <div className="about-image">
+          <div className="home-image">
             <img src="/images/home1.jpg" alt="City view" />
           </div>
         </div>
       </div>
 
-      <div className="about-section reverse fade-in-scroll">
-        <div className="about-content">
-          <div className="about-image">
+      <div className="home-section reverse fade-in-scroll">
+        <div className="home-content">
+          <div className="home-image">
             <img src="/images/home2.png" alt="About image" />
           </div>
 
-          <div className="about-text">
+          <div className="home-text">
             <h2>WHY CHOOSE US</h2>
 
             <p>We specialize in creating efficient, secure, and future-ready technology infrastructures tailored to each client's needs. </p>
 
             <p>Whether you're running a security firm, logistics operation, or professional office, our mission is to keep your technology running smoothly, so you can focus on what matters most: your business.</p>
 
-            <ul className="about-list">
+            <ul className="home-list">
               <li>
                 <img src="/images/check_mark.png" alt="Check" />
                 <span>Locally owned and operated in <strong>Bakersfield, CA</strong></span>
@@ -163,4 +163,4 @@ function About() {
   )
 }
 
-export default About
+export default Home
