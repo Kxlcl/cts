@@ -26,7 +26,7 @@ function Contact() {
     setStatus('Sending...');
 
     try {
-      const response = await fetch('/send-email.php', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
