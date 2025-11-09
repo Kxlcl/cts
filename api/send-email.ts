@@ -32,7 +32,7 @@ export default async function handler(
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO || 'nyanoctupus123@gmail.com',
+      to: process.env.EMAIL_TO || 'support@calitech-solutions.com',
       subject: `New Inquiry - ${fullName}`,
       html: `
         <h2>New Contact Form Submission</h2>
