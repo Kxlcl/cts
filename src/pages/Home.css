@@ -133,14 +133,14 @@
   z-index: 1;
 }
 
-.about-text h2 {
+.home-text h2 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1;
   margin: 0 0 2rem 0;
 }
 
-.about-text p {
+.home-text p {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -154,20 +154,20 @@
   text-align: left;
 }
 
-.about-list li {
+.home-list li {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
 }
 
-.about-list img {
+.home-list img {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
 }
 
-.about-list span {
+.home-list span {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -303,7 +303,7 @@
     text-align: left;
   }
 
-  .about-text h2 {
+  .home-text h2 {
     font-size: 2rem;
   }
 
@@ -323,7 +323,7 @@
     z-index: 2;
   }
 
-  .about-image img {
+  .home-image img {
     width: 300px;
     height: 300px;
   }

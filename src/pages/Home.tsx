@@ -54,7 +54,7 @@ function Home() {
             <p className="hero-title">CALITECH <br></br>SOLUTIONS</p>
 
             <div className="hero-image">
-              <img src="/images/about_image.png" alt="Beach scene" />
+              <img src="/images/home_image.png" alt="Beach scene" />
             </div>
           </div>
 
@@ -98,7 +98,7 @@ function Home() {
       <div className="home-section reverse fade-in-scroll">
         <div className="home-content">
           <div className="home-image">
-            <img src="/images/home2.png" alt="About image" />
+            <img src="/images/home2.png" alt="Home image" />
           </div>
 
           <div className="home-text">
