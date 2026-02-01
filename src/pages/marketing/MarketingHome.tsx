@@ -5,10 +5,14 @@ import './MarketingHome.css'
 
 const portfolioItems = [
   {
-    title: '',
-    description: '',
-    bulletPoints: [],
-    imageUrl: ''
+    title: 'TIER 1',
+    description: 'Includes:',
+    bulletPoints: [
+      'One custom designed landing page',
+      'Business descriptions as needed',
+      'Contact information and addresses'
+    ],
+    imageUrl: '/src/pages/marketing/website_images/website1.png'
   },
   {
     title: '',
@@ -45,19 +49,34 @@ function MarketingHome() {
         </div>
       </div>
 
-      <div className="service-carousel">
-        <div className="service-card-section">
-          <div className="service-card-content">
-            <ServiceCard
-              key={`portfolio-${currentIndex}`}
-              title={portfolioItems[currentIndex].title}
-              description={portfolioItems[currentIndex].description}
-              bulletPoints={portfolioItems[currentIndex].bulletPoints}
-              imageUrl={portfolioItems[currentIndex].imageUrl}
-              currentPage={currentIndex + 1}
-              totalPages={portfolioItems.length}
-              onNext={handleNext}
-            />
+      <div className="portfolio-container">
+        <div className="portfolio-text-section">
+          <h2 className="portfolio-title">{portfolioItems[currentIndex].title}</h2>
+          <p className="portfolio-description">{portfolioItems[currentIndex].description}</p>
+          <ul className="portfolio-bullets">
+            {portfolioItems[currentIndex].bulletPoints.map((point, index) => (
+              <li key={index}>
+                <img src="/images/check_mark.png" alt="Check" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="service-carousel">
+          <div className="service-card-section">
+            <div className="service-card-content">
+              <ServiceCard
+                key={`portfolio-${currentIndex}`}
+                title=""
+                description=""
+                bulletPoints={[]}
+                imageUrl={portfolioItems[currentIndex].imageUrl}
+                currentPage={currentIndex + 1}
+                totalPages={portfolioItems.length}
+                onNext={handleNext}
+              />
+            </div>
           </div>
         </div>
       </div>

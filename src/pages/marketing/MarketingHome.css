@@ -21,31 +21,95 @@
   color: #000;
 }
 
-.service-carousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.service-card-section {
-  position: relative;
-  width: 100%;
-}
-
-.service-card-content {
+.portfolio-container {
   display: flex;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.portfolio-text-section {
+  flex: 0 0 35%;
+  padding-left: 2rem;
+}
+
+.portfolio-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0 0 1rem 0;
+  color: #000;
+  letter-spacing: -8px;
+}
+
+.portfolio-description {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: #000;
+}
+
+.portfolio-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.portfolio-bullets img {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.portfolio-bullets span {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.portfolio-container .service-carousel {
+  overflow: visible;
+  position: relative;
+  flex: 1;
+}
+
+.portfolio-container .service-card-section {
+  position: relative;
+  width: 100%;
+}
+
+.portfolio-container .service-card-content {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 }
 
-/* Scale carousel contents by 30% */
-.service-carousel .service-card-sidebar {
-  height: 780px;
+.portfolio-container .service-carousel .service-card-sidebar {
+  height: 500px;
 }
 
-.service-carousel .service-card-image {
-  height: 780px;
+.portfolio-container .service-carousel .service-card-image {
+  height: 500px;
+  width: 50vw;
+  overflow-y: auto;
+  border-radius: 30px;
+}
+
+.portfolio-container .service-carousel .service-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -54,11 +118,50 @@
     letter-spacing: -8px;
   }
 
-  .service-card-content {
+  .portfolio-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .portfolio-text-section {
+    flex: 1;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .portfolio-title {
+    font-size: 2.5rem;
+    letter-spacing: -4px;
+  }
+
+  .portfolio-description {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-bullets li {
+    margin-bottom: 0.75rem;
+  }
+
+  .portfolio-bullets img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .portfolio-bullets span {
+    font-size: 1rem;
+  }
+
+  .portfolio-container .service-card-content {
     justify-content: center;
   }
 
-  .service-carousel .service-card-image {
-    height: 585px;
+  .portfolio-container .service-carousel .service-card-sidebar {
+    height: 375px;
+  }
+
+  .portfolio-container .service-carousel .service-card-image {
+    height: 375px;
+    width: 95%;
   }
 }
