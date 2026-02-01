@@ -1,0 +1,64 @@
+.marketing-hero {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketing-hero .hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketing-hero .hero-title {
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 0.8;
+  letter-spacing: -14px;
+  text-align: center;
+  margin: 0;
+  color: #000;
+}
+
+.service-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.service-card-section {
+  position: relative;
+  width: 100%;
+}
+
+.service-card-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+/* Scale carousel contents by 30% */
+.service-carousel .service-card-sidebar {
+  height: 780px;
+}
+
+.service-carousel .service-card-image {
+  height: 780px;
+}
+
+@media (max-width: 768px) {
+  .marketing-hero .hero-title {
+    font-size: 4rem;
+    letter-spacing: -8px;
+  }
+
+  .service-card-content {
+    justify-content: center;
+  }
+
+  .service-carousel .service-card-image {
+    height: 585px;
+  }
+}
