@@ -3,6 +3,10 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import MarketingHome from './pages/marketing/MarketingHome'
+import Tier1 from './pages/marketing/Tier1'
+import Tier2 from './pages/marketing/Tier2'
+import Tier3 from './pages/marketing/Tier3'
+import Tier4 from './pages/marketing/Tier4'
 import './App.css'
 
 function App() {
@@ -21,7 +25,10 @@ function App() {
           // Marketing subdomain routes
           <Routes>
             <Route path="/" element={<MarketingHome />} />
-            {/* Add more marketing routes here */}
+            <Route path="/tier1" element={<Tier1 />} />
+            <Route path="/tier2" element={<Tier2 />} />
+            <Route path="/tier3" element={<Tier3 />} />
+            <Route path="/tier4" element={<Tier4 />} />
           </Routes>
         ) : (
           // Main site routes

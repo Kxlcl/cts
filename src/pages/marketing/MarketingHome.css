@@ -1,24 +1,481 @@
-.marketing-hero {
-  min-height: 50vh;
+.marketing-split-container {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
-.marketing-hero .hero-content {
-  flex: 1;
+.marketing-split-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: #fff;
+  background-image: linear-gradient(rgba(230, 242, 247, 0.9), rgba(230, 242, 247, 0.9)), url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.marketing-text {
+  text-align: left;
+  position: relative;
+}
+
+.marketing-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-image: url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.marketing-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-image: url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.marketing-main-title {
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 0.85;
+  margin: 0;
+  padding-top: 1rem;
+  letter-spacing: -10px;
+  text-transform: uppercase;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.marketing-subtitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  margin: 0.2rem 0 0 0;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.marketing-split-right {
+  margin-left: 40%;
+  width: 60%;
+  background-color: #f0f4f7;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.marketing-split-right::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-progress-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #333333;
+  z-index: 1000;
+}
+
+.scroll-progress-fill {
+  height: 100%;
+  background-color: #85acc7;
+  transition: width 0.1s ease;
+}
+
+.marketing-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  width: 100%;
   justify-content: center;
 }
 
-.marketing-hero .hero-title {
-  font-size: 8rem;
+.marketing-nav-button {
+  padding: 0.6rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  line-height: 0.8;
-  letter-spacing: -14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.marketing-nav-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 25px;
+  background-image: url('/images/marketing_hero.gif');
+  background-size: cover;
+  background-position: center;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 2px;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.marketing-nav-button:hover {
+  background-color: rgba(12, 61, 97, 0.3) !important;
+  background-image: none !important;
+  background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-decoration: none !important;
+}
+
+.marketing-nav-button:hover::before {
+  opacity: 0 !important;
+}
+
+.marketing-content {
+  padding: 4rem;
+}
+
+.marketing-split-right .main-footer {
+  padding: 2rem 4rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.marketing-split-right .footer-content {
+  max-width: 100%;
+  gap: 3rem;
+}
+
+.marketing-section {
+  min-height: 100vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.marketing-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.75;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -7px;
+  color: #000;
+}
+
+.marketing-section-content {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.marketing-section-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.marketing-section-text {
   text-align: center;
   margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.marketing-section-compact {
+  min-height: auto;
+  padding: 4rem 0;
+}
+
+.marketing-contact-form {
+  max-width: 900px;
+  width: 75%;
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+.marketing-contact-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.marketing-contact-form .form-group label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #000;
+}
+
+.marketing-contact-form .form-group input,
+.marketing-contact-form .form-group select,
+.marketing-contact-form .form-group textarea {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  border: none;
+  border-bottom: 3px solid #000;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+}
+
+.marketing-contact-form .form-group input::placeholder,
+.marketing-contact-form .form-group textarea::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.marketing-contact-form .form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 24px;
+  cursor: pointer;
+  font-style: normal;
+  padding-right: 2.5rem;
+  background-color: #C5D3E0;
+  border-radius: 25px;
+  padding: 1rem 2.5rem 1rem 1.5rem;
+  border: none;
+}
+
+.marketing-contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.marketing-contact-form .submit-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.marketing-contact-form .submit-container p {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.marketing-contact-form .submit-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FFCC7A;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.marketing-contact-form .submit-button img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+}
+
+.marketing-contact-form .submit-button:hover {
+  transform: scale(1.1);
+}
+
+.marketing-contact-form .form-status {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f5975;
+}
+
+.tier-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
+.tier-card {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 4rem 2.5rem;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  min-height: 320px;
+  aspect-ratio: 5 / 7;
+  position: relative;
+  overflow: visible;
+}
+
+.tier-card > h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: -1.8px;
+}
+
+.tier-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2.5rem 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  transform: scale(1) rotate(0deg);
+}
+
+.tier-card:hover .tier-card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.tier-card-overlay-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tier-card-overlay h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1.8px;
+}
+
+.tier-card-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+}
+
+.tier-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.tier-card-button:hover {
+  transform: translateX(5px);
+}
+
+.tier-card-button span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tier-card-button-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FFCC7A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tier-card-button-icon img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
 }
 
 .portfolio-container {
@@ -113,9 +570,34 @@
 }
 
 @media (max-width: 768px) {
-  .marketing-hero .hero-title {
-    font-size: 4rem;
-    letter-spacing: -8px;
+  .marketing-split-container {
+    flex-direction: column;
+  }
+
+  .marketing-split-left {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .marketing-main-title {
+    font-size: 5rem;
+    letter-spacing: -6px;
+  }
+
+  .marketing-subtitle {
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+  }
+
+  .marketing-split-right {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .marketing-content {
+    padding: 2rem;
   }
 
   .portfolio-container {
