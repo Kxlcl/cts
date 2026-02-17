@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './MarketingHome.css'
 import Footer from '../../components/Footer'
 
@@ -85,8 +86,7 @@ function MarketingHome() {
       <div className="marketing-split-container">
         <div className="marketing-split-left">
           <div className="marketing-text">
-            <h1 className="marketing-main-title">DESIGN</h1>
-            <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
+            <img src="/images/CT-02.png" alt="CaliTech Solutions" className="marketing-logo" />
           </div>
           <nav className="marketing-nav">
             <button onClick={() => scrollToSection('website-design')} className="marketing-nav-button">
@@ -118,12 +118,12 @@ function MarketingHome() {
                       <h3>Landing Page</h3>
                       <p>A basic, minimally functional website that showcases your brand and promotes a clear call to action.</p>
                     </div>
-                    <a href="/portfolio/tier1" className="tier-card-button">
+                    <Link to="/tier1" className="tier-card-button">
                       <span>VIEW SAMPLE</span>
                       <div className="tier-card-button-icon">
                         <img src="/images/down_arrow.png" alt="View" />
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="tier-card">
@@ -133,12 +133,12 @@ function MarketingHome() {
                       <h3>Single Page</h3>
                       <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
                     </div>
-                    <a href="/portfolio/tier2" className="tier-card-button">
+                    <Link to="/tier2" className="tier-card-button">
                       <span>VIEW SAMPLE</span>
                       <div className="tier-card-button-icon">
                         <img src="/images/down_arrow.png" alt="View" />
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="tier-card">
@@ -148,12 +148,12 @@ function MarketingHome() {
                       <h3>Full Website</h3>
                       <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
                     </div>
-                    <a href="/portfolio/tier3" className="tier-card-button">
+                    <Link to="/tier3" className="tier-card-button">
                       <span>VIEW SAMPLE</span>
                       <div className="tier-card-button-icon">
                         <img src="/images/down_arrow.png" alt="View" />
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="tier-card">
@@ -163,12 +163,12 @@ function MarketingHome() {
                       <h3>Custom</h3>
                       <p>Enterprise-level custom development tailored to your specific needs with unlimited possibilities and full creative control.</p>
                     </div>
-                    <a href="/portfolio/tier4" className="tier-card-button">
+                    <Link to="/tier4" className="tier-card-button">
                       <span>VIEW SAMPLE</span>
                       <div className="tier-card-button-icon">
                         <img src="/images/down_arrow.png" alt="View" />
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

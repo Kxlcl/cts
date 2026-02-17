@@ -53,6 +53,16 @@
   color: #000;
 }
 
+.hero-title-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 650px;
+  height: auto;
+}
+
 .hero-image {
   display: flex;
   justify-content: center;
@@ -275,6 +285,10 @@
   .hero-title {
     font-size: 4.5rem;
     letter-spacing: -8px;
+  }
+
+  .hero-title-logo {
+    width: 220px;
   }
 
   .hero-image {

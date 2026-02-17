@@ -49,6 +49,13 @@
   background-position: center;
 }
 
+.marketing-logo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  padding: 1rem 0;
+}
+
 .marketing-main-title {
   font-size: 9rem;
   font-weight: 900;
@@ -200,7 +207,11 @@
 
 .marketing-split-right .footer-content {
   max-width: 100%;
-  gap: 3rem;
+  gap: 4rem;
+}
+
+.marketing-split-right .footer-hours {
+  display: none;
 }
 
 .marketing-section {
@@ -380,6 +391,36 @@
   overflow: visible;
 }
 
+.tier-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tier-card:nth-child(1)::before {
+  background-image: url('/images/landing_page_img.jpg');
+}
+
+.tier-card:nth-child(2)::before {
+  background-image: url('/images/single_page_img.png');
+}
+
+.tier-card:nth-child(3)::before {
+  background-image: url('/images/full_website_img.avif');
+}
+
+.tier-card:nth-child(4)::before {
+  background-image: url('/images/custom_img.webp');
+}
+
 .tier-card > h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.1rem;
@@ -388,6 +429,8 @@
   color: #000;
   text-transform: uppercase;
   letter-spacing: -1.8px;
+  position: relative;
+  z-index: 1;
 }
 
 .tier-card-overlay {
@@ -396,7 +439,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 1);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -408,6 +451,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
   transform: scale(1) rotate(0deg);
+  z-index: 2;
 }
 
 .tier-card:hover .tier-card-overlay {
