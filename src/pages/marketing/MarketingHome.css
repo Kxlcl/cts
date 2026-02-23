@@ -483,43 +483,28 @@
   margin: 0;
 }
 
-.tier-card-button {
+.sample-buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  text-decoration: none;
-  transition: transform 0.3s ease;
+  gap: 0.5rem;
+  align-self: flex-start;
 }
 
-.tier-card-button:hover {
-  transform: translateX(5px);
-}
-
-.tier-card-button span {
+.sample-direct-btn {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.tier-card-button-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  letter-spacing: 1px;
+  color: #1a1a1a;
   background-color: #FFCC7A;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
-.tier-card-button-icon img {
-  width: 24px;
-  height: 24px;
-  transform: rotate(-90deg);
+.sample-direct-btn:hover {
+  opacity: 0.85;
 }
 
 .portfolio-container {
@@ -677,7 +662,65 @@
   .portfolio-bullets span {
     font-size: 1rem;
   }
+}
 
+.sample-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  animation: modal-fade-in 0.2s ease;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sample-modal-content {
+  position: relative;
+  width: 92vw;
+  height: 90vh;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: modal-scale-in 0.25s ease;
+}
+
+@keyframes modal-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.sample-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.2s;
+}
+
+.sample-modal-close:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+@media (max-width: 768px) {
   .portfolio-container .service-card-content {
     justify-content: center;
   }
@@ -690,4 +733,10 @@
     height: 375px;
     width: 95%;
   }
+}
+
+.sample-modal-body {
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
 }

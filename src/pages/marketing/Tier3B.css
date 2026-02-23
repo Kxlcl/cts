@@ -1,0 +1,426 @@
+.t3b-page {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.t3b-header {
+  padding: 1.25rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10,10,10,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.t3b-nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.t3b-nav a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.t3b-nav a:hover {
+  color: #fff;
+}
+
+
+.t3b-hero {
+  padding: 6rem 3rem 4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 88vh;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-hero-title {
+  font-size: 7.5rem;
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -6px;
+  margin: 0;
+  max-width: 700px;
+}
+
+.t3b-hero-side {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.t3b-hero-side p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.t3b-hero-cta {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+  transition: opacity 0.3s;
+  align-self: flex-start;
+}
+
+.t3b-hero-cta:hover {
+  opacity: 0.6;
+}
+
+.t3b-ticker {
+  display: flex;
+  gap: 2rem;
+  padding: 1.25rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+}
+
+.t3b-ticker span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.3);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.t3b-services {
+  display: flex;
+  gap: 6rem;
+  padding: 6rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-services-left {
+  flex-shrink: 0;
+  width: 240px;
+}
+
+.t3b-section-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.5rem;
+}
+
+.t3b-services-left h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.t3b-services-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.t3b-service-row {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.t3b-service-row:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-service-row h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.t3b-service-row p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.t3b-work {
+  padding: 6rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-work-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.t3b-work-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.t3b-work-row:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-work-row:hover {
+  padding-left: 1rem;
+}
+
+.t3b-work-num {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.t3b-work-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  flex: 1;
+  transition: letter-spacing 0.3s;
+}
+
+.t3b-work-row:hover .t3b-work-title {
+  letter-spacing: 1px;
+}
+
+.t3b-work-tag {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  padding: 0.3rem 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+}
+
+.t3b-work-year {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+.t3b-team {
+  padding: 6rem 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.t3b-team h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin: 0 0 3rem 0;
+}
+
+.t3b-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.t3b-team-member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.t3b-team-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  flex-shrink: 0;
+}
+
+.t3b-team-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+}
+
+.t3b-team-info p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+}
+
+.t3b-contact {
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.t3b-contact h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -4px;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.t3b-contact > p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 400px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.t3b-contact-email {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 4px;
+  align-self: flex-start;
+  transition: border-color 0.3s;
+}
+
+.t3b-contact-email:hover {
+  border-color: #fff;
+}
+
+.t3b-contact-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 1rem 0;
+}
+
+.t3b-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.t3b-form input,
+.t3b-form textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.t3b-form input::placeholder,
+.t3b-form textarea::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.t3b-form input:focus,
+.t3b-form textarea:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.t3b-form textarea {
+  resize: vertical;
+}
+
+.t3b-form button {
+  align-self: flex-start;
+  background-color: #fff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.t3b-form button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .t3b-nav { display: none; }
+
+  .t3b-hero {
+    flex-direction: column;
+    padding: 4rem 2rem 3rem 2rem;
+    align-items: flex-start;
+    min-height: auto;
+    gap: 3rem;
+  }
+
+  .t3b-hero-title {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+
+  .t3b-hero-side { max-width: 100%; }
+
+  .t3b-ticker { padding: 1rem 2rem; }
+
+  .t3b-services {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+
+  .t3b-service-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .t3b-service-row h3 { min-width: auto; }
+
+  .t3b-work { padding: 4rem 2rem; }
+
+  .t3b-work-row { gap: 1.5rem; }
+
+  .t3b-team { padding: 4rem 2rem; }
+
+  .t3b-team-grid { grid-template-columns: 1fr; }
+
+  .t3b-contact { padding: 4rem 2rem; }
+
+  .t3b-contact h2 {
+    font-size: 2.8rem;
+    letter-spacing: -2px;
+  }
+}

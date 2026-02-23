@@ -18,21 +18,6 @@
   letter-spacing: 1px;
 }
 
-.tier1-back-button {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #3a4a5a;
-  text-decoration: none;
-  padding: 0.5rem 1.25rem;
-  border: 2px solid #3a4a5a;
-  border-radius: 25px;
-  transition: all 0.3s;
-}
-
-.tier1-back-button:hover {
-  background-color: #3a4a5a;
-  color: white;
-}
 
 .tier1-hero {
   position: relative;

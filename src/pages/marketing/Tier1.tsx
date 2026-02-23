@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './Tier1.css'
 
 function Tier1() {
@@ -25,7 +24,6 @@ function Tier1() {
     <div className="tier1-page">
       <header className="tier1-header">
         <div className="tier1-logo">YOUR BUSINESS</div>
-        <Link to="/" className="tier1-back-button">← Back to Tiers</Link>
       </header>
 
       <section className="tier1-hero">

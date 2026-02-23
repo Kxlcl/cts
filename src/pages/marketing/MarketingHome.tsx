@@ -1,9 +1,27 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import './MarketingHome.css'
 import Footer from '../../components/Footer'
+import Tier1 from './Tier1'
+import Tier1B from './Tier1B'
+import Tier2 from './Tier2'
+import Tier2B from './Tier2B'
+import Tier3 from './Tier3'
+import Tier3B from './Tier3B'
+
+type SampleKey = 'tier1' | 'tier1b' | 'tier2' | 'tier2b' | 'tier3' | 'tier3b'
+
+const SAMPLE_COMPONENTS: Record<SampleKey, React.ComponentType> = {
+  tier1: Tier1,
+  tier1b: Tier1B,
+  tier2: Tier2,
+  tier2b: Tier2B,
+  tier3: Tier3,
+  tier3b: Tier3B,
+}
 
 function MarketingHome() {
+  const [openSample, setOpenSample] = useState<SampleKey | null>(null)
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -81,12 +99,29 @@ function MarketingHome() {
     }
   }, [])
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenSample(null)
+    }
+    if (openSample) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKey)
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKey)
+    }
+  }, [openSample])
+
   return (
     <>
       <div className="marketing-split-container">
         <div className="marketing-split-left">
           <div className="marketing-text">
-            <img src="/images/CT-02.png" alt="CaliTech Solutions" className="marketing-logo" />
+            <h1 className="marketing-main-title">DESIGN</h1>
+            <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
           </div>
           <nav className="marketing-nav">
             <button onClick={() => scrollToSection('website-design')} className="marketing-nav-button">
@@ -118,12 +153,10 @@ function MarketingHome() {
                       <h3>Landing Page</h3>
                       <p>A basic, minimally functional website that showcases your brand and promotes a clear call to action.</p>
                     </div>
-                    <Link to="/tier1" className="tier-card-button">
-                      <span>VIEW SAMPLE</span>
-                      <div className="tier-card-button-icon">
-                        <img src="/images/down_arrow.png" alt="View" />
-                      </div>
-                    </Link>
+                    <div className="sample-buttons">
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>SAMPLE 1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1b')}>SAMPLE 2</button>
+                    </div>
                   </div>
                 </div>
                 <div className="tier-card">
@@ -133,12 +166,10 @@ function MarketingHome() {
                       <h3>Single Page</h3>
                       <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
                     </div>
-                    <Link to="/tier2" className="tier-card-button">
-                      <span>VIEW SAMPLE</span>
-                      <div className="tier-card-button-icon">
-                        <img src="/images/down_arrow.png" alt="View" />
-                      </div>
-                    </Link>
+                    <div className="sample-buttons">
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2')}>SAMPLE 1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2b')}>SAMPLE 2</button>
+                    </div>
                   </div>
                 </div>
                 <div className="tier-card">
@@ -148,27 +179,10 @@ function MarketingHome() {
                       <h3>Full Website</h3>
                       <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
                     </div>
-                    <Link to="/tier3" className="tier-card-button">
-                      <span>VIEW SAMPLE</span>
-                      <div className="tier-card-button-icon">
-                        <img src="/images/down_arrow.png" alt="View" />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-                <div className="tier-card">
-                  <h3>Custom</h3>
-                  <div className="tier-card-overlay">
-                    <div className="tier-card-overlay-content">
-                      <h3>Custom</h3>
-                      <p>Enterprise-level custom development tailored to your specific needs with unlimited possibilities and full creative control.</p>
+                    <div className="sample-buttons">
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3')}>SAMPLE 1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3b')}>SAMPLE 2</button>
                     </div>
-                    <Link to="/tier4" className="tier-card-button">
-                      <span>VIEW SAMPLE</span>
-                      <div className="tier-card-button-icon">
-                        <img src="/images/down_arrow.png" alt="View" />
-                      </div>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -264,6 +278,20 @@ function MarketingHome() {
           <Footer />
         </div>
       </div>
+
+      {openSample && (() => {
+        const SampleComponent = SAMPLE_COMPONENTS[openSample]
+        return (
+          <div className="sample-modal-overlay" onClick={() => setOpenSample(null)}>
+            <div className="sample-modal-content" onClick={e => e.stopPropagation()}>
+              <button className="sample-modal-close" onClick={() => setOpenSample(null)}>✕ CLOSE</button>
+              <div className="sample-modal-body">
+                <SampleComponent />
+              </div>
+            </div>
+          </div>
+        )
+      })()}
     </>
   )
 }
