@@ -4,282 +4,301 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Header */
 .tier2-header {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 3rem;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #E8F5E9;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .tier2-logo {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  color: #2E7D32;
+  letter-spacing: 0.5px;
 }
 
 .tier2-nav {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .tier2-nav a {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #444;
   text-decoration: none;
   letter-spacing: 0.5px;
-  transition: color 0.2s;
+  transition: color 0.3s;
 }
 
 .tier2-nav a:hover {
-  color: #2a6496;
+  color: #2E7D32;
 }
 
-
+/* Hero */
 .tier2-hero {
-  min-height: 85vh;
-  background-color: #f0f5f9;
-  background-image: url('/images/tier1_hero_buildings.jpg');
-  background-size: cover;
-  background-position: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
   display: flex;
   align-items: center;
   padding: 0 6rem;
-  position: relative;
-}
-
-.tier2-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(240, 245, 249, 0.82);
 }
 
 .tier2-hero-text {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .tier2-hero-text h1 {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 4.5rem;
+  font-weight: 800;
   line-height: 1.1;
-  color: #111;
+  color: #fff;
   margin: 0 0 1.5rem 0;
   letter-spacing: -2px;
 }
 
 .tier2-hero-text h1 span {
-  color: #2a6496;
+  color: #FFD54F;
 }
 
 .tier2-hero-text p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
   margin: 0 0 2.5rem 0;
 }
 
 .tier2-cta {
   display: inline-block;
-  background-color: #2a6496;
-  color: #fff;
+  background-color: #FFD54F;
+  color: #1B5E20;
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
+  padding: 1.1rem 2.5rem;
+  border-radius: 4px;
   transition: background-color 0.3s;
 }
 
 .tier2-cta:hover {
-  background-color: #1e4f7a;
+  background-color: #FFC107;
 }
 
-.tier2-services {
-  padding: 6rem 4rem;
+/* Solutions Section */
+.tier2-solutions {
   background-color: #fff;
+  padding: 6rem 4rem;
+}
+
+.tier2-solutions h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
+  color: #2E7D32;
+  margin: 0 0 4rem 0;
+  letter-spacing: 2px;
 }
 
-.tier2-services h2 {
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: #2a6496;
-  margin: 0 0 3rem 0;
-}
-
-.tier2-services-grid {
+.tier2-solutions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 900px;
+  gap: 3rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.tier2-service-card {
-  padding: 2.5rem 2rem;
-  border: 1px solid #e8e8e8;
-  border-radius: 12px;
-  transition: box-shadow 0.3s;
+.tier2-solution-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #F1F8F4;
+  border-radius: 8px;
+  transition: transform 0.3s;
 }
 
-.tier2-service-card:hover {
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+.tier2-solution-card:hover {
+  transform: translateY(-8px);
 }
 
-.tier2-service-icon {
-  font-size: 1.5rem;
-  color: #2a6496;
+.tier2-solution-icon {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.tier2-service-card h3 {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #111;
+.tier2-solution-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2E7D32;
   margin: 0 0 0.75rem 0;
 }
 
-.tier2-service-card p {
-  font-size: 0.9rem;
-  color: #666;
+.tier2-solution-card p {
+  font-size: 0.85rem;
+  color: #555;
   line-height: 1.6;
   margin: 0;
 }
 
-.tier2-about {
+/* Stats Section */
+.tier2-stats {
+  background-color: #2E7D32;
+  padding: 5rem 4rem;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.tier2-stat {
+  text-align: center;
+}
+
+.tier2-stat h3 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #FFD54F;
+  margin: 0 0 0.5rem 0;
+}
+
+.tier2-stat p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Mission Section */
+.tier2-mission {
+  background-color: #F1F8F4;
+  padding: 6rem 4rem;
+  display: flex;
   gap: 5rem;
-  padding: 6rem 6rem;
-  background-color: #f8fafb;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.tier2-about-image {
-  flex-shrink: 0;
-  width: 380px;
-  height: 420px;
-  border-radius: 16px;
-  background-color: #c5d3e0;
-  background-image: url('/images/home1.jpg');
-  background-size: cover;
-  background-position: center;
+.tier2-mission-content {
+  flex: 1;
 }
 
-.tier2-about-text h2 {
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: #2a6496;
+.tier2-mission-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2E7D32;
+  margin: 0 0 2rem 0;
+  letter-spacing: 1px;
+}
+
+.tier2-mission-content p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
   margin: 0 0 1.5rem 0;
 }
 
-.tier2-about-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 0 0 1rem 0;
+.tier2-mission-image {
+  flex-shrink: 0;
+  width: 450px;
+  height: 350px;
+  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+  border-radius: 8px;
 }
 
+/* Contact Section */
 .tier2-contact {
-  padding: 6rem 4rem;
   background-color: #fff;
+  padding: 6rem 4rem;
   text-align: center;
 }
 
 .tier2-contact h2 {
   font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: -2px;
-  color: #111;
+  font-weight: 700;
+  color: #2E7D32;
   margin: 0 0 1rem 0;
 }
 
-.tier2-contact > p {
+.tier2-contact p {
+  font-size: 1.05rem;
   color: #666;
   margin: 0 0 3rem 0;
-  font-size: 1rem;
 }
 
 .tier2-form {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .tier2-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .tier2-form input,
 .tier2-form textarea {
-  width: 100%;
+  background-color: #F1F8F4;
+  border: 2px solid transparent;
+  border-radius: 4px;
   padding: 1rem 1.25rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
+  transition: border-color 0.3s;
 }
 
 .tier2-form input:focus,
 .tier2-form textarea:focus {
-  border-color: #2a6496;
+  border-color: #43A047;
 }
 
 .tier2-form textarea {
   resize: vertical;
+  min-height: 120px;
 }
 
 .tier2-form button {
-  align-self: center;
-  background-color: #2a6496;
+  background-color: #2E7D32;
   color: #fff;
   border: none;
-  border-radius: 50px;
-  padding: 1rem 3rem;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 2px;
+  border-radius: 4px;
+  padding: 1.1rem 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .tier2-form button:hover {
-  background-color: #1e4f7a;
+  background-color: #1B5E20;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .tier2-header {
-    flex-wrap: wrap;
-    gap: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .tier2-nav {
-    display: none;
+    gap: 1.5rem;
   }
 
   .tier2-hero {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
     min-height: 70vh;
   }
 
@@ -287,29 +306,111 @@
     font-size: 2.5rem;
   }
 
-  .tier2-services {
-    padding: 4rem 2rem;
+  .tier2-hero-text p {
+    font-size: 1rem;
   }
 
-  .tier2-services-grid {
+  .tier2-solutions {
+    padding: 4rem 1.5rem;
+  }
+
+  .tier2-solutions h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tier2-solutions-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .tier2-about {
+  .tier2-stats {
     flex-direction: column;
+    gap: 3rem;
     padding: 4rem 2rem;
   }
 
-  .tier2-about-image {
+  .tier2-stat h3 {
+    font-size: 2.5rem;
+  }
+
+  .tier2-mission {
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .tier2-mission-content h2 {
+    font-size: 2rem;
+  }
+
+  .tier2-mission-image {
     width: 100%;
-    height: 280px;
+    height: 250px;
   }
 
   .tier2-contact {
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .tier2-contact h2 {
+    font-size: 1.8rem;
   }
 
   .tier2-form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.tier2-footer {
+  background-color: #1B5E20;
+  color: #fff;
+  padding: 3rem 4rem 1.5rem 4rem;
+}
+
+.tier2-footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.tier2-footer-section h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  color: #FFD54F;
+}
+
+.tier2-footer-section p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tier2-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.tier2-footer-bottom p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tier2-footer {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  .tier2-footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

@@ -7,7 +7,7 @@ interface ArrowButtonProps {
 function ArrowButton({ onClick }: ArrowButtonProps) {
   return (
     <button className="arrow-button" onClick={onClick}>
-      <img src="/images/down_arrow.png" alt="Arrow" />
+      <img src="/images/calitech/icons/down_arrow.png" alt="Arrow" />
     </button>
   )
 }

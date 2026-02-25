@@ -5,7 +5,7 @@ function Footer() {
     <footer className="main-footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="/images/CT-02.png" alt="CaliTech Solutions" />
+          <img src="/images/calitech/logos/CT-02.png" alt="CaliTech Solutions" />
         </div>
 
         <div className="footer-section">

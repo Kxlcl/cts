@@ -142,7 +142,7 @@ function MarketingHome() {
           <div className="marketing-content">
             <section id="website-design" className="marketing-section">
               <div className="marketing-section-content">
-                <img src="/images/WebsiteHero_Design.png" alt="Website Design" className="marketing-section-image" />
+                <img src="/images/marketing/marketing-home/WebsiteHero_Design.png" alt="Website Design" className="marketing-section-image" />
                 <p className="marketing-section-text">Want a custom website design but not sure what fits your needs? Explore our tiers to learn more and view designs.</p>
               </div>
               <div className="tier-cards-container">
@@ -191,7 +191,7 @@ function MarketingHome() {
             <section id="design-marketing" className="marketing-section marketing-section-compact">
               <h2>Graphic Design & Marketing</h2>
               <p>Coming Soon!</p>
-              <img src="/images/tab_image.png" alt="Coming soon" style={{ maxWidth: '200px', marginTop: '2rem' }} />
+              <img src="/images/marketing/marketing-home/tab_image.png" alt="Coming soon" style={{ maxWidth: '200px', marginTop: '2rem' }} />
             </section>
 
             <section id="contact" className="marketing-section">
@@ -267,7 +267,7 @@ function MarketingHome() {
                 <div className="submit-container">
                   <p>SUBMIT</p>
                   <button type="submit" className="submit-button">
-                    <img src="/images/down_arrow.png" alt="Submit" />
+                    <img src="/images/calitech/icons/down_arrow.png" alt="Submit" />
                   </button>
                 </div>
 

@@ -51,15 +51,15 @@ function Home() {
 
         <div className="hero-content">
           <div className="hero-main fade-in-scroll">
-            <img src="/images/CT-02.png" alt="CaliTech Solutions" className="hero-title-logo" />
+            <img src="/images/calitech/logos/CT-02.png" alt="CaliTech Solutions" className="hero-title-logo" />
 
             <div className="hero-image">
-              <img src="/images/home_image.png" alt="Beach scene" />
+              <img src="/images/calitech/home/home_image.png" alt="Beach scene" />
             </div>
           </div>
 
           <button className="scroll-button fade-in-scroll" onClick={scrollToWhatWeDo}>
-            <img src="/images/down_arrow.png" alt="Scroll down" />
+            <img src="/images/calitech/icons/down_arrow.png" alt="Scroll down" />
           </button>
 
           <div className="hero-text fade-in-scroll">
@@ -90,7 +90,7 @@ function Home() {
           </div>
 
           <div className="home-image">
-            <img src="/images/home1.jpg" alt="City view" />
+            <img src="/images/calitech/home/home1.jpg" alt="City view" />
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ function Home() {
       <div className="home-section reverse fade-in-scroll">
         <div className="home-content">
           <div className="home-image">
-            <img src="/images/home2.png" alt="Home image" />
+            <img src="/images/calitech/home/home2.png" alt="Home image" />
           </div>
 
           <div className="home-text">
@@ -110,23 +110,23 @@ function Home() {
 
             <ul className="home-list">
               <li>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span>Locally owned and operated in <strong>Bakersfield, CA</strong></span>
               </li>
               <li>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span>Fast, responsive on-call IT support</span>
               </li>
               <li>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span><strong>30-day service guarantee</strong> on all completed work</span>
               </li>
               <li>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span>Experienced technicians with real-world problem-solving</span>
               </li>
               <li>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span>Transparent pricing and <strong>no surprise fees</strong></span>
               </li>
             </ul>

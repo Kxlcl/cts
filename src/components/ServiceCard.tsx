@@ -17,7 +17,7 @@ function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, 
       <div className="service-card-sidebar sidebar-desktop" style={{ backgroundColor: sidebarColor }}>
         <div className="sidebar-page-number">{currentPage}</div>
         <button className="sidebar-next-button" onClick={onNext}>
-          <img src="/images/down_arrow.png" alt="Next" />
+          <img src="/images/calitech/icons/down_arrow.png" alt="Next" />
         </button>
       </div>
       <div className="service-card-image">
@@ -28,7 +28,7 @@ function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, 
           <ul className="service-card-bullets">
             {bulletPoints.map((point, index) => (
               <li key={index}>
-                <img src="/images/check_mark.png" alt="Check" />
+                <img src="/images/calitech/icons/check_mark.png" alt="Check" />
                 <span>{point}</span>
               </li>
             ))}
@@ -38,7 +38,7 @@ function ServiceCard({ title, description, bulletPoints, imageUrl, currentPage, 
       <div className="service-card-sidebar sidebar-mobile" style={{ backgroundColor: sidebarColor }}>
         <div className="sidebar-page-number">{currentPage}</div>
         <button className="sidebar-next-button" onClick={onNext}>
-          <img src="/images/down_arrow.png" alt="Next" />
+          <img src="/images/calitech/icons/down_arrow.png" alt="Next" />
         </button>
       </div>
     </div>

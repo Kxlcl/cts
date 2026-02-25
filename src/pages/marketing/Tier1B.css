@@ -1,186 +1,338 @@
 .t1b-page {
-  background-color: #111;
+  background-color: #0F0F0F;
   min-height: 100vh;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Header */
 .t1b-header {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .t1b-logo {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: #D4AF37;
+  letter-spacing: 3px;
+  font-family: Georgia, serif;
 }
 
-
-.t1b-hero {
-  min-height: 88vh;
-  background-color: #111;
-  background-image: url('/images/tier1_hero_buildings.jpg');
-  background-size: cover;
-  background-position: center;
+.t1b-nav {
   display: flex;
-  align-items: flex-end;
-  padding: 0 4rem 5rem 4rem;
-  position: relative;
+  gap: 2.5rem;
 }
 
-.t1b-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(17,17,17,0.92) 30%, rgba(17,17,17,0.3) 100%);
+.t1b-nav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
-.t1b-hero-inner {
-  position: relative;
-  z-index: 1;
+.t1b-nav a:hover {
+  color: #D4AF37;
 }
 
-.t1b-hero-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  color: #D4A853;
-  margin: 0 0 1rem 0;
-  text-transform: uppercase;
+/* Hero */
+.t1b-hero {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.t1b-hero-content {
+  max-width: 800px;
 }
 
 .t1b-hero-title {
-  font-size: 5.5rem;
-  font-weight: 900;
-  line-height: 0.9;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  font-family: Georgia, serif;
+  color: #fff;
+}
+
+.t1b-hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0 0 2.5rem 0;
-  letter-spacing: -3px;
+  font-weight: 300;
 }
 
 .t1b-hero-cta {
   display: inline-block;
-  background-color: #D4A853;
-  color: #111;
-  font-size: 0.85rem;
-  font-weight: 800;
+  background-color: #D4AF37;
+  color: #0F0F0F;
+  font-size: 0.9rem;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2.5rem;
-  border-radius: 50px;
+  border-radius: 4px;
   transition: background-color 0.3s;
 }
 
 .t1b-hero-cta:hover {
-  background-color: #c49040;
+  background-color: #C4A030;
 }
 
-.t1b-features {
-  background-color: #1a1a1a;
+/* Menu Section */
+.t1b-menu {
+  background-color: #1A1A1A;
   padding: 6rem 4rem;
 }
 
-.t1b-features-grid {
+.t1b-section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 4rem 0;
+  font-family: Georgia, serif;
+  color: #D4AF37;
+}
+
+.t1b-menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.t1b-feature {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  padding-top: 2rem;
-}
-
-.t1b-feature-num {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #D4A853;
-  letter-spacing: 2px;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.t1b-feature h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin: 0 0 0.75rem 0;
-  color: #fff;
-}
-
-.t1b-feature p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.6);
-  margin: 0;
-}
-
-.t1b-contact {
-  background-color: #111;
-  padding: 8rem 4rem;
+.t1b-dish {
   text-align: center;
 }
 
-.t1b-contact-title {
-  font-size: 5rem;
-  font-weight: 900;
-  margin: 0 0 1rem 0;
-  letter-spacing: -4px;
+.t1b-dish-image {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, #CD853F 0%, #8B4513 100%);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.t1b-dish h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
   color: #fff;
+  font-family: Georgia, serif;
 }
 
-.t1b-contact-sub {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.5);
-  margin: 0 0 2.5rem 0;
+.t1b-dish p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
 }
 
-.t1b-contact-btn {
-  display: inline-block;
-  font-size: 1rem;
+.t1b-price {
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #D4A853;
-  text-decoration: none;
-  border-bottom: 2px solid #D4A853;
-  padding-bottom: 4px;
-  transition: opacity 0.3s;
+  color: #D4AF37;
+  font-family: Georgia, serif;
 }
 
-.t1b-contact-btn:hover {
-  opacity: 0.7;
+/* About Section */
+.t1b-about {
+  background-color: #0F0F0F;
+  padding: 6rem 4rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.t1b-about-content {
+  flex: 1;
+}
+
+.t1b-about-content .t1b-section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.t1b-about-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 1.5rem 0;
+}
+
+.t1b-about-image {
+  flex-shrink: 0;
+  width: 400px;
+  height: 500px;
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  border-radius: 8px;
+}
+
+/* Reservation Section */
+.t1b-reservation {
+  background-color: #1A1A1A;
+  padding: 6rem 4rem;
+  text-align: center;
+}
+
+.t1b-reservation-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 3rem 0;
+}
+
+.t1b-contact-info {
+  margin: 0 0 3rem 0;
+}
+
+.t1b-contact-info p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.75rem 0;
+}
+
+.t1b-reservation-btn {
+  background-color: #D4AF37;
+  color: #0F0F0F;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.t1b-reservation-btn:hover {
+  background-color: #C4A030;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .t1b-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .t1b-nav {
+    gap: 1.5rem;
+  }
+
   .t1b-hero {
-    padding: 0 2rem 3rem 2rem;
+    padding: 4rem 1.5rem;
+    min-height: 70vh;
   }
 
   .t1b-hero-title {
-    font-size: 3rem;
-    letter-spacing: -1px;
+    font-size: 2.5rem;
   }
 
-  .t1b-features {
-    padding: 4rem 2rem;
+  .t1b-hero-subtitle {
+    font-size: 1rem;
   }
 
-  .t1b-features-grid {
+  .t1b-menu {
+    padding: 4rem 1.5rem;
+  }
+
+  .t1b-section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .t1b-menu-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .t1b-contact {
-    padding: 5rem 2rem;
+  .t1b-about {
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    gap: 2.5rem;
   }
 
-  .t1b-contact-title {
-    font-size: 3rem;
+  .t1b-about-content .t1b-section-title {
+    text-align: center;
+  }
+
+  .t1b-about-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .t1b-reservation {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* Footer */
+.t1b-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 4rem 1.5rem 4rem;
+}
+
+.t1b-footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.t1b-footer-section h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  color: #D4AF37;
+  font-family: Georgia, serif;
+}
+
+.t1b-footer-section p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.t1b-footer-bottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.t1b-footer-bottom p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .t1b-footer {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+  }
+
+  .t1b-footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

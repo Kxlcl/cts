@@ -1,139 +1,203 @@
-import Footer from '../../components/Footer'
+import { useState } from 'react'
 import './Tier3B.css'
 
+type Page = 'home' | 'collections' | 'lookbook' | 'about' | 'contact'
+
 function Tier3B() {
+  const [currentPage, setCurrentPage] = useState<Page>('home')
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return (
+          <section className="t3b-hero">
+            <div className="t3b-hero-content">
+              <p className="t3b-season">SPRING / SUMMER 2026</p>
+              <h1>TIMELESS<br />ELEGANCE</h1>
+              <p className="t3b-tagline">Where sophistication meets modern minimalism</p>
+              <button onClick={() => setCurrentPage('collections')} className="t3b-cta">EXPLORE COLLECTION</button>
+            </div>
+          </section>
+        )
+
+      case 'collections':
+        return (
+          <>
+            <section className="t3b-categories">
+              <div className="t3b-section-tag">SHOP BY CATEGORY</div>
+              <div className="t3b-category-grid">
+                <div className="t3b-category">
+                  <div className="t3b-category-image"></div>
+                  <h3>Ready-to-Wear</h3>
+                  <p>Curated pieces for everyday luxury</p>
+                </div>
+                <div className="t3b-category">
+                  <div className="t3b-category-image"></div>
+                  <h3>Evening Wear</h3>
+                  <p>Statement pieces for special occasions</p>
+                </div>
+                <div className="t3b-category">
+                  <div className="t3b-category-image"></div>
+                  <h3>Accessories</h3>
+                  <p>Complete your look with timeless details</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="t3b-featured">
+              <div className="t3b-section-tag">NEW ARRIVALS</div>
+              <h2>Latest From The Runway</h2>
+              <div className="t3b-product-grid">
+                <div className="t3b-product">
+                  <div className="t3b-product-image"></div>
+                  <div className="t3b-product-info">
+                    <h3>Silk Blazer</h3>
+                    <p className="t3b-product-price">$895</p>
+                  </div>
+                </div>
+                <div className="t3b-product">
+                  <div className="t3b-product-image"></div>
+                  <div className="t3b-product-info">
+                    <h3>Tailored Trousers</h3>
+                    <p className="t3b-product-price">$425</p>
+                  </div>
+                </div>
+                <div className="t3b-product">
+                  <div className="t3b-product-image"></div>
+                  <div className="t3b-product-info">
+                    <h3>Cashmere Sweater</h3>
+                    <p className="t3b-product-price">$675</p>
+                  </div>
+                </div>
+                <div className="t3b-product">
+                  <div className="t3b-product-image"></div>
+                  <div className="t3b-product-info">
+                    <h3>Leather Handbag</h3>
+                    <p className="t3b-product-price">$1,250</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+        )
+
+      case 'lookbook':
+        return (
+          <section className="t3b-lookbook">
+            <div className="t3b-lookbook-content">
+              <div className="t3b-lookbook-text">
+                <div className="t3b-section-tag">SPRING 2026 LOOKBOOK</div>
+                <h2>The Art of<br />Simplicity</h2>
+                <p>
+                  This season celebrates the beauty of understated elegance. Clean lines, luxurious fabrics,
+                  and timeless silhouettes come together to create pieces that transcend trends.
+                </p>
+                <p>
+                  Each garment is meticulously crafted in our Italian atelier, ensuring exceptional quality
+                  and attention to detail that defines the Atelier Noir standard.
+                </p>
+                <button onClick={() => setCurrentPage('collections')} className="t3b-lookbook-btn">
+                  SHOP THE COLLECTION
+                </button>
+              </div>
+              <div className="t3b-lookbook-images">
+                <div className="t3b-lookbook-img t3b-lookbook-large"></div>
+                <div className="t3b-lookbook-img"></div>
+              </div>
+            </div>
+          </section>
+        )
+
+      case 'about':
+        return (
+          <section className="t3b-philosophy">
+            <div className="t3b-philosophy-content">
+              <div className="t3b-section-tag">OUR PHILOSOPHY</div>
+              <h2>Crafted for the Modern Woman</h2>
+              <div className="t3b-philosophy-grid">
+                <div className="t3b-philosophy-item">
+                  <h3>Sustainable Luxury</h3>
+                  <p>We believe in creating fashion that lasts—both in quality and style. Every piece is made with ethically sourced materials and produced in fair-trade facilities.</p>
+                </div>
+                <div className="t3b-philosophy-item">
+                  <h3>Timeless Design</h3>
+                  <p>Our collections are designed to transcend seasonal trends. We focus on classic silhouettes and versatile pieces that remain relevant year after year.</p>
+                </div>
+                <div className="t3b-philosophy-item">
+                  <h3>Italian Craftsmanship</h3>
+                  <p>Each garment is handcrafted in our Italian workshop by master artisans with decades of experience in haute couture.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )
+
+      case 'contact':
+        return (
+          <section className="t3b-newsletter">
+            <div className="t3b-newsletter-content">
+              <h2>Join Our Atelier</h2>
+              <p>Be the first to discover new collections, exclusive previews, and special events.</p>
+              <form className="t3b-newsletter-form">
+                <input type="email" placeholder="Enter your email address" />
+                <button type="submit">SUBSCRIBE</button>
+              </form>
+              <div className="t3b-newsletter-social">
+                <a href="#">Instagram</a>
+                <span>•</span>
+                <a href="#">Pinterest</a>
+                <span>•</span>
+                <a href="#">Facebook</a>
+              </div>
+            </div>
+          </section>
+        )
+
+      default:
+        return null
+    }
+  }
+
   return (
-    <>
-      <div className="t3b-page">
-        <header className="t3b-header">
-          <div className="t3b-logo">YOUR BUSINESS</div>
-          <nav className="t3b-nav">
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="#team">Team</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </header>
-
-        <section className="t3b-hero">
-          <h1 className="t3b-hero-title">WE MAKE<br />THE FUTURE<br />HAPPEN.</h1>
-          <div className="t3b-hero-side">
-            <p>Award-winning creative studio specializing in digital experiences, branding, and growth strategy.</p>
-            <a href="#contact" className="t3b-hero-cta">LET'S TALK �</a>
-          </div>
-        </section>
-
-        <div className="t3b-ticker">
-          <span>BRAND IDENTITY</span>
-          <span>�</span>
-          <span>WEB DESIGN</span>
-          <span>�</span>
-          <span>DIGITAL MARKETING</span>
-          <span>�</span>
-          <span>UX/UI</span>
-          <span>�</span>
-          <span>DEVELOPMENT</span>
-          <span>�</span>
+    <div className="t3b-page">
+      <header className="t3b-header">
+        <div className="t3b-logo" onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
+          ATELIER NOIR
         </div>
+        <nav className="t3b-nav">
+          <a onClick={() => setCurrentPage('collections')} className={currentPage === 'collections' ? 'active' : ''}>Collections</a>
+          <a onClick={() => setCurrentPage('lookbook')} className={currentPage === 'lookbook' ? 'active' : ''}>Lookbook</a>
+          <a onClick={() => setCurrentPage('about')} className={currentPage === 'about' ? 'active' : ''}>About</a>
+          <a onClick={() => setCurrentPage('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
+        </nav>
+      </header>
 
-        <section id="services" className="t3b-services">
-          <div className="t3b-services-left">
-            <div className="t3b-section-tag">SERVICES</div>
-            <h2>Everything<br />you need.</h2>
-          </div>
-          <div className="t3b-services-right">
-            <div className="t3b-service-row">
-              <h3>Brand Identity</h3>
-              <p>Strategy, identity systems, and positioning that set you apart from the competition.</p>
-            </div>
-            <div className="t3b-service-row">
-              <h3>Web Design & Dev</h3>
-              <p>Pixel-perfect, high-performance websites and applications built for results.</p>
-            </div>
-            <div className="t3b-service-row">
-              <h3>Content & SEO</h3>
-              <p>Content strategies and search optimization that bring the right people to you.</p>
-            </div>
-            <div className="t3b-service-row">
-              <h3>Growth Marketing</h3>
-              <p>Paid media, analytics, and conversion optimization to maximize your ROI.</p>
-            </div>
-          </div>
-        </section>
+      {renderPage()}
 
-        <section id="work" className="t3b-work">
-          <div className="t3b-section-tag">SELECTED WORK</div>
-          <div className="t3b-work-list">
-            <div className="t3b-work-row">
-              <span className="t3b-work-num">01</span>
-              <span className="t3b-work-title">Project Alpha</span>
-              <span className="t3b-work-tag">Brand + Web</span>
-              <span className="t3b-work-year">2024</span>
-            </div>
-            <div className="t3b-work-row">
-              <span className="t3b-work-num">02</span>
-              <span className="t3b-work-title">Project Beta</span>
-              <span className="t3b-work-tag">E-Commerce</span>
-              <span className="t3b-work-year">2024</span>
-            </div>
-            <div className="t3b-work-row">
-              <span className="t3b-work-num">03</span>
-              <span className="t3b-work-title">Project Gamma</span>
-              <span className="t3b-work-tag">Web App</span>
-              <span className="t3b-work-year">2023</span>
-            </div>
-            <div className="t3b-work-row">
-              <span className="t3b-work-num">04</span>
-              <span className="t3b-work-title">Project Delta</span>
-              <span className="t3b-work-tag">Marketing</span>
-              <span className="t3b-work-year">2023</span>
-            </div>
+      <footer className="t3b-footer">
+        <div className="t3b-footer-content">
+          <div className="t3b-footer-section">
+            <h4>ATELIER NOIR</h4>
+            <p>Timeless elegance meets modern minimalism. Handcrafted in our Italian workshop since 2010.</p>
           </div>
-        </section>
-
-        <section id="team" className="t3b-team">
-          <div className="t3b-section-tag">TEAM</div>
-          <h2>Who's behind it all.</h2>
-          <div className="t3b-team-grid">
-            <div className="t3b-team-member">
-              <div className="t3b-team-photo"></div>
-              <div className="t3b-team-info">
-                <h3>Jane Smith</h3>
-                <p>Creative Director</p>
-              </div>
-            </div>
-            <div className="t3b-team-member">
-              <div className="t3b-team-photo"></div>
-              <div className="t3b-team-info">
-                <h3>John Doe</h3>
-                <p>Lead Developer</p>
-              </div>
-            </div>
-            <div className="t3b-team-member">
-              <div className="t3b-team-photo"></div>
-              <div className="t3b-team-info">
-                <h3>Sara Lee</h3>
-                <p>Strategy Lead</p>
-              </div>
-            </div>
+          <div className="t3b-footer-section">
+            <h4>CUSTOMER CARE</h4>
+            <p>Shipping & Returns</p>
+            <p>Size Guide</p>
+            <p>care@ateliernoir.com</p>
           </div>
-        </section>
-
-        <section id="contact" className="t3b-contact">
-          <h2>START A PROJECT.</h2>
-          <p>We work with brands who want to do something meaningful. Let's talk.</p>
-          <a href="mailto:hello@yourbusiness.com" className="t3b-contact-email">hello@yourbusiness.com</a>
-          <div className="t3b-contact-divider"></div>
-          <form className="t3b-form">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
-            <textarea placeholder="Tell us about your project" rows={4}></textarea>
-            <button type="submit">SEND �</button>
-          </form>
-        </section>
-      </div>
-      <Footer />
-    </>
+          <div className="t3b-footer-section">
+            <h4>FOLLOW US</h4>
+            <p>Instagram</p>
+            <p>Pinterest</p>
+            <p>Facebook</p>
+          </div>
+        </div>
+        <div className="t3b-footer-bottom">
+          <p>&copy; 2026 Atelier Noir. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   )
 }
 
