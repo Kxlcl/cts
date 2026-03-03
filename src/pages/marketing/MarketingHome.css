@@ -124,18 +124,19 @@
 
 .marketing-nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
   margin-top: 2rem;
   width: 100%;
-  justify-content: center;
+  max-width: 300px;
+  align-items: stretch;
 }
 
 .marketing-nav-button {
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -153,7 +154,7 @@
   transition: all 0.5s ease;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -611,13 +612,23 @@
   }
 
   .marketing-main-title {
-    font-size: 5rem;
-    letter-spacing: -6px;
+    font-size: 4rem;
+    letter-spacing: -4px;
   }
 
   .marketing-subtitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: -2px;
+  }
+
+  .marketing-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .marketing-nav-button {
+    font-size: 0.65rem;
+    padding: 0.5rem 0.8rem;
   }
 
   .marketing-split-right {
@@ -626,7 +637,67 @@
   }
 
   .marketing-content {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .marketing-section {
+    padding: 1.5rem 0;
+    min-height: auto;
+  }
+
+  .marketing-section h2 {
+    font-size: 3rem;
+    letter-spacing: -4px;
+    margin-bottom: 1.5rem;
+  }
+
+  .marketing-section-text {
+    font-size: 0.95rem;
+  }
+
+  .marketing-contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .marketing-contact-form .form-group label {
+    font-size: 1.2rem;
+  }
+
+  .marketing-contact-form .form-group input,
+  .marketing-contact-form .form-group select,
+  .marketing-contact-form .form-group textarea {
+    font-size: 1rem;
+  }
+
+  .marketing-contact-form .submit-container p {
+    font-size: 1.5rem;
+  }
+
+  .tier-cards-container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .tier-card {
+    padding: 2rem 1.5rem;
+    min-height: 180px;
+  }
+
+  .tier-card > h3 {
+    font-size: 1.4rem;
+  }
+
+  .tier-card-overlay {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .tier-card-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .tier-card-overlay p {
+    font-size: 0.8rem;
   }
 
   .portfolio-container {
@@ -661,6 +732,19 @@
 
   .portfolio-bullets span {
     font-size: 1rem;
+  }
+
+  .sample-modal-content {
+    width: 95vw;
+    height: 95vh;
+    border-radius: 12px;
+  }
+
+  .sample-modal-close {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
   }
 }
 

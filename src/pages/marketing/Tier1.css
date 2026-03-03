@@ -255,42 +255,96 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .tier1-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .tier1-logo {
+    font-size: 0.85rem;
+  }
+
   .tier1-hero {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 3rem 1.5rem;
     min-height: 70vh;
   }
 
   .tier1-hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tier1-cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .tier1-hero-disclaimer {
+    font-size: 0.7rem;
+  }
+
+  .tier1-featured {
+    padding: 1rem 0 0 0;
+  }
+
+  .tier1-featured-label {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .tier1-featured-logos {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    padding: 1rem 0;
+  }
+
+  .tier1-featured-logos-track {
+    gap: 2.5rem;
   }
 
   .tier1-featured-logo {
-    font-size: 1.3rem;
+    height: 28px;
+  }
+
+  .tier1-testimonials {
+    padding: 3rem 1.5rem;
+  }
+
+  .tier1-testimonial-block {
+    margin-bottom: 3rem;
   }
 
   .tier1-testimonial-quote {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .tier1-stars {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
   }
 
   .tier1-decorative-graphic {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
   }
 
   .tier1-footer-cta {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
   }
 
   .tier1-footer-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .tier1-footer-button {
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -314,5 +368,9 @@
 @media (max-width: 768px) {
   .tier1-footer {
     padding: 1.5rem 1.5rem;
+  }
+
+  .tier1-footer-bottom p {
+    font-size: 0.7rem;
   }
 }
