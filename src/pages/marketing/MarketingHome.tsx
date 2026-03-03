@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './MarketingHome.css'
 import Footer from '../../components/Footer'
+import ArrowButton from '../../components/ArrowButton'
 import Tier1 from './Tier1'
 import Tier1B from './Tier1B'
 import Tier2 from './Tier2'
@@ -21,6 +22,7 @@ const SAMPLE_COMPONENTS: Record<SampleKey, React.ComponentType> = {
 
 function MarketingHome() {
   const [openSample, setOpenSample] = useState<SampleKey | null>(null)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -74,6 +76,7 @@ function MarketingHome() {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' })
     }
+    setMenuOpen(false)
   }
 
   useEffect(() => {
@@ -123,7 +126,10 @@ function MarketingHome() {
             <h1 className="marketing-main-title">DESIGN</h1>
             <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
           </div>
-          <nav className="marketing-nav">
+          <div className="marketing-menu-toggle">
+            <ArrowButton onClick={() => setMenuOpen(!menuOpen)} />
+          </div>
+          <nav className={`marketing-nav ${menuOpen ? 'marketing-nav-open' : ''}`}>
             <button onClick={() => scrollToSection('website-design')} className="marketing-nav-button">
               Website Design
             </button>

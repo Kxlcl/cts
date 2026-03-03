@@ -122,6 +122,10 @@
   transition: width 0.1s ease;
 }
 
+.marketing-menu-toggle {
+  display: none;
+}
+
 .marketing-nav {
   display: flex;
   flex-direction: column;
@@ -623,10 +627,34 @@
     padding-bottom: 0.5rem;
   }
 
+  .marketing-menu-toggle {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .marketing-menu-toggle .arrow-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .marketing-menu-toggle .arrow-button img {
+    width: 18px;
+    height: 18px;
+    transform: rotate(0deg);
+  }
+
   .marketing-nav {
+    display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .marketing-nav.marketing-nav-open {
+    max-height: 500px;
   }
 
   .marketing-nav-button {
