@@ -155,7 +155,6 @@ function MarketingHome() {
                     </div>
                     <div className="sample-buttons">
                       <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>SAMPLE 1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1b')}>SAMPLE 2</button>
                     </div>
                   </div>
                 </div>
@@ -167,8 +166,7 @@ function MarketingHome() {
                       <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2')}>SAMPLE 1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2b')}>SAMPLE 2</button>
+                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
                     </div>
                   </div>
                 </div>
@@ -180,8 +178,16 @@ function MarketingHome() {
                       <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3')}>SAMPLE 1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3b')}>SAMPLE 2</button>
+                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="tier-card">
+                  <h3>Custom Tier</h3>
+                  <div className="tier-card-overlay">
+                    <div className="tier-card-overlay-content">
+                      <h3>Custom Tier</h3>
+                      <p>Contact us for more info</p>
                     </div>
                   </div>
                 </div>
