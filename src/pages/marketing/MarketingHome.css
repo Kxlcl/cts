@@ -608,22 +608,25 @@
     position: relative;
     width: 100%;
     height: auto;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .marketing-main-title {
-    font-size: 4rem;
-    letter-spacing: -4px;
+    font-size: 2.5rem;
+    letter-spacing: -2.5px;
+    padding-top: 0.5rem;
   }
 
   .marketing-subtitle {
-    font-size: 2rem;
-    letter-spacing: -2px;
+    font-size: 1.2rem;
+    letter-spacing: -1.2px;
+    padding-bottom: 0.5rem;
   }
 
   .marketing-nav {
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 1rem;
   }
 
   .marketing-nav-button {
