@@ -4,9 +4,9 @@ import './Nav.css'
 function Nav() {
   return (
     <nav className="main-nav">
-      <img src="/images/logo.png" alt="CaliTech Solutions" className="nav-logo" />
+      <img src="/images/calitech/logos/CT-02.png" alt="CaliTech Solutions" className="nav-logo" />
       <div className="nav-links">
-        <NavLink to="/about">ABOUT</NavLink>
+        <NavLink to="/">HOME</NavLink>
         <NavLink to="/services">SERVICES</NavLink>
         <NavLink to="/contact">CONTACT</NavLink>
       </div>

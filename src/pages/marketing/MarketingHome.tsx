@@ -1,0 +1,305 @@
+import { useState, useEffect } from 'react'
+import './MarketingHome.css'
+import Footer from '../../components/Footer'
+import Tier1 from './Tier1'
+import Tier1B from './Tier1B'
+import Tier2 from './Tier2'
+import Tier2B from './Tier2B'
+import Tier3 from './Tier3'
+import Tier3B from './Tier3B'
+
+type SampleKey = 'tier1' | 'tier1b' | 'tier2' | 'tier2b' | 'tier3' | 'tier3b'
+
+const SAMPLE_COMPONENTS: Record<SampleKey, React.ComponentType> = {
+  tier1: Tier1,
+  tier1b: Tier1B,
+  tier2: Tier2,
+  tier2b: Tier2B,
+  tier3: Tier3,
+  tier3b: Tier3B,
+}
+
+function MarketingHome() {
+  const [openSample, setOpenSample] = useState<SampleKey | null>(null)
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    inquiryType: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          inquiryType: '',
+          message: ''
+        });
+      } else {
+        setStatus('Failed to send message. Please try again.');
+      }
+    } catch {
+      setStatus('Failed to send message. Please try again.');
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  useEffect(() => {
+    const scrollableSection = document.querySelector('.marketing-split-right')
+
+    const handleScroll = () => {
+      if (scrollableSection) {
+        const scrollTop = scrollableSection.scrollTop
+        const scrollHeight = scrollableSection.scrollHeight - scrollableSection.clientHeight
+        const progress = (scrollTop / scrollHeight) * 100
+        setScrollProgress(progress)
+      }
+    }
+
+    if (scrollableSection) {
+      scrollableSection.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      if (scrollableSection) {
+        scrollableSection.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenSample(null)
+    }
+    if (openSample) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKey)
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKey)
+    }
+  }, [openSample])
+
+  return (
+    <>
+      <div className="marketing-split-container">
+        <div className="marketing-split-left">
+          <div className="marketing-text">
+            <h1 className="marketing-main-title">DESIGN</h1>
+            <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
+          </div>
+          <nav className="marketing-nav">
+            <button onClick={() => scrollToSection('website-design')} className="marketing-nav-button">
+              Website Design
+            </button>
+            <button onClick={() => scrollToSection('design-marketing')} className="marketing-nav-button">
+              Graphic Design & Marketing
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="marketing-nav-button">
+              Contact
+            </button>
+          </nav>
+        </div>
+        <div className="marketing-split-right">
+          <div className="scroll-progress-bar">
+            <div className="scroll-progress-fill" style={{ width: `${scrollProgress}%` }}></div>
+          </div>
+          <div className="marketing-content">
+            <section id="website-design" className="marketing-section">
+              <div className="marketing-section-content">
+                <img src="/images/marketing/marketing-home/WebsiteHero_Design.png" alt="Website Design" className="marketing-section-image" />
+                <p className="marketing-section-text">Want a custom website design but not sure what fits your needs? Explore our tiers to learn more and view designs.</p>
+              </div>
+              <div className="tier-cards-container">
+                <div className="tier-card">
+                  <h3>Landing Page</h3>
+                  <div className="tier-card-overlay">
+                    <div className="tier-card-overlay-content">
+                      <h3>Landing Page</h3>
+                      <p>A basic, minimally functional website that showcases your brand and promotes a clear call to action.</p>
+                    </div>
+                    <div className="sample-buttons">
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>SAMPLE 1</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="tier-card">
+                  <h3>Single Page</h3>
+                  <div className="tier-card-overlay">
+                    <div className="tier-card-overlay-content">
+                      <h3>Single Page</h3>
+                      <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
+                    </div>
+                    <div className="sample-buttons">
+                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="tier-card">
+                  <h3>Full Website</h3>
+                  <div className="tier-card-overlay">
+                    <div className="tier-card-overlay-content">
+                      <h3>Full Website</h3>
+                      <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
+                    </div>
+                    <div className="sample-buttons">
+                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="tier-card">
+                  <h3>Custom Tier</h3>
+                  <div className="tier-card-overlay">
+                    <div className="tier-card-overlay-content">
+                      <h3>Custom Tier</h3>
+                      <p>Contact us for more info</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="design-marketing" className="marketing-section marketing-section-compact">
+              <h2>Graphic Design & Marketing</h2>
+              <p>Coming Soon!</p>
+              <img src="/images/marketing/marketing-home/tab_image.png" alt="Coming soon" style={{ maxWidth: '200px', marginTop: '2rem' }} />
+            </section>
+
+            <section id="contact" className="marketing-section">
+              <h2>Contact</h2>
+              <p>Get in touch with us to discuss your project.</p>
+              <form className="marketing-contact-form" onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label>FULL NAME</label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="First Name, Last Name"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>EMAIL ADDRESS</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="email@email.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>PHONE NUMBER</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="000-000-0000"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    title="Please enter a valid phone number in format: 123-456-7890"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>INQUIRY TYPE</label>
+                  <select
+                    name="inquiryType"
+                    value={formData.inquiryType}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Select an option</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="quote">Request a Quote</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div className="form-group">
+                  <label>MESSAGE</label>
+                  <textarea
+                    name="message"
+                    placeholder="Begin typing..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={8}
+                    required
+                  />
+                </div>
+
+                <div className="submit-container">
+                  <p>SUBMIT</p>
+                  <button type="submit" className="submit-button">
+                    <img src="/images/calitech/icons/down_arrow.png" alt="Submit" />
+                  </button>
+                </div>
+
+                {status && <p className="form-status">{status}</p>}
+              </form>
+            </section>
+          </div>
+          <Footer />
+        </div>
+      </div>
+
+      {openSample && (() => {
+        const SampleComponent = SAMPLE_COMPONENTS[openSample]
+        return (
+          <div className="sample-modal-overlay" onClick={() => setOpenSample(null)}>
+            <div className="sample-modal-content" onClick={e => e.stopPropagation()}>
+              <button className="sample-modal-close" onClick={() => setOpenSample(null)}>✕ CLOSE</button>
+              <div className="sample-modal-body">
+                <SampleComponent />
+              </div>
+            </div>
+          </div>
+        )
+      })()}
+    </>
+  )
+}
+
+export default MarketingHome

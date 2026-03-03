@@ -42,21 +42,37 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Email configuration
-$to = 'nyanoctupus123@gmail.com'; // Test email
-$subject = 'New Contact Form Submission - ' . $inquiryType;
+$to = 'support@calitech-solutions.com';
+$subject = 'New Inquiry - ' . $fullName;
 
-// Email body
-$emailBody = "New contact form submission:\n\n";
-$emailBody .= "Full Name: " . $fullName . "\n";
-$emailBody .= "Email: " . $email . "\n";
-$emailBody .= "Phone: " . $phone . "\n";
-$emailBody .= "Inquiry Type: " . $inquiryType . "\n\n";
-$emailBody .= "Message:\n" . $message . "\n";
+// Email body (HTML)
+$emailBody = "
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { color: #333; }
+        p { margin: 10px 0; }
+        strong { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>New Contact Form Submission</h2>
+    <p><strong>Name:</strong> $fullName</p>
+    <p><strong>Email:</strong> $email</p>
+    <p><strong>Phone:</strong> $phone</p>
+    <p><strong>Inquiry Type:</strong> $inquiryType</p>
+    <p><strong>Message:</strong></p>
+    <p>$message</p>
+</body>
+</html>
+";
 
 // Email headers
-$headers = "From: " . $email . "\r\n";
-$headers .= "Reply-To: " . $email . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+$headers = "From: CaliTech Solutions <support@calitech-solutions.com>\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 // Send email
 if (mail($to, $subject, $emailBody, $headers)) {

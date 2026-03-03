@@ -14,7 +14,7 @@ const softwareServices = [
       'Malware and virus removal',
       'Operating system tuning and optimization'
     ],
-    imageUrl: '/images/software.png'
+    imageUrl: '/images/calitech/services/software.png'
   },
   {
     title: 'CLOUD & DATA\nSERVICES',
@@ -25,7 +25,7 @@ const softwareServices = [
       'Cloud backups and synchronization',
       'File-sharing solutions for teams'
     ],
-    imageUrl: '/images/software.png'
+    imageUrl: '/images/calitech/services/software.png'
   },
   {
     title: 'SOFTWARE SETUP FOR\nSECURITY OPERATIONS',
@@ -35,7 +35,7 @@ const softwareServices = [
       'Dispatch and reporting systems',
       'Patrol management apps for mobile devices'
     ],
-    imageUrl: '/images/software.png'
+    imageUrl: '/images/calitech/services/software.png'
   }
 ]
 
@@ -48,7 +48,7 @@ const hardwareServices = [
       'Cabling and access point installation',
       'Secure Wi-Fi deployment'
     ],
-    imageUrl: '/images/hardware.png'
+    imageUrl: '/images/calitech/services/hardware.png'
   },
   {
     title: 'SYSTEM MAINTENANCE\n& MONITORING',
@@ -57,7 +57,7 @@ const hardwareServices = [
       'Preventative maintenance',
       'Hardware diagnostics and performance tuning'
     ],
-    imageUrl: '/images/hardware.png'
+    imageUrl: '/images/calitech/services/hardware.png'
   },
   {
     title: 'SECURITY HARDWARE\nINTEGRATION',
@@ -67,7 +67,7 @@ const hardwareServices = [
       'Access control hardware setup',
       'Patrol tablet/phone configuration'
     ],
-    imageUrl: '/images/hardware.png'
+    imageUrl: '/images/calitech/services/hardware.png'
   }
 ]
 
@@ -80,7 +80,7 @@ const informationServices = [
       'Upgrade and migration planning',
       'Cybersecurity best-practice consulting'
     ],
-    imageUrl: '/images/info.png'
+    imageUrl: '/images/calitech/icons/info.png'
   },
   {
     title: 'DATA SECURITY &\nCOMPLIANCE GUIDANCE',
@@ -89,7 +89,7 @@ const informationServices = [
       'Data handling policies',
       'Security training for staff'
     ],
-    imageUrl: '/images/info.png'
+    imageUrl: '/images/calitech/icons/info.png'
   },
   {
     title: 'DOCUMENTATION\n& TRAINING',
@@ -99,7 +99,7 @@ const informationServices = [
       'Procedure documentation',
       'Technology onboarding sessions'
     ],
-    imageUrl: '/images/info.png'
+    imageUrl: '/images/calitech/icons/info.png'
   }
 ]
 
