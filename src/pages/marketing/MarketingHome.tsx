@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './MarketingHome.css'
 import Footer from '../../components/Footer'
-import ArrowButton from '../../components/ArrowButton'
 import Tier1 from './Tier1'
 import Tier1B from './Tier1B'
 import Tier2 from './Tier2'
@@ -121,13 +120,24 @@ function MarketingHome() {
   return (
     <>
       <div className="marketing-split-container">
+        {menuOpen && <div className="mobile-menu-backdrop" onClick={() => setMenuOpen(false)}></div>}
         <div className="marketing-split-left">
           <div className="marketing-text">
-            <h1 className="marketing-main-title">DESIGN</h1>
-            <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
-          </div>
-          <div className="marketing-menu-toggle">
-            <ArrowButton onClick={() => setMenuOpen(!menuOpen)} />
+            <div className="marketing-title-group">
+              <h1 className="marketing-main-title">DESIGN</h1>
+              <h2 className="marketing-subtitle">BY CALITECH<br/>SOLUTIONS</h2>
+            </div>
+            <div className="marketing-menu-toggle">
+              <button
+                className={`hamburger-menu ${menuOpen ? 'hamburger-open' : ''}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
           <nav className={`marketing-nav ${menuOpen ? 'marketing-nav-open' : ''}`}>
             <button onClick={() => scrollToSection('website-design')} className="marketing-nav-button">

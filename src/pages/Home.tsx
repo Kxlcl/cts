@@ -51,7 +51,7 @@ function Home() {
 
         <div className="hero-content">
           <div className="hero-main fade-in-scroll">
-            <img src="/images/calitech/logos/CT-02.png" alt="CaliTech Solutions" className="hero-title-logo" />
+            <p className="hero-title">CALITECH <br></br>SOLUTIONS</p>
 
             <div className="hero-image">
               <img src="/images/calitech/home/home_image.png" alt="Beach scene" />
