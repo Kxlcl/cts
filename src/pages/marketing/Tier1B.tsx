@@ -15,30 +15,6 @@ function Tier1B() {
         </div>
       </section>
 
-      <section id="menu" className="t1b-menu">
-        <h2 className="t1b-section-title">Featured Dishes</h2>
-        <div className="t1b-menu-grid">
-          <div className="t1b-dish">
-            <div className="t1b-dish-image"></div>
-            <h3>Homemade Pasta</h3>
-            <p>Fresh pasta made daily with our signature sauce</p>
-            <span className="t1b-price">$24</span>
-          </div>
-          <div className="t1b-dish">
-            <div className="t1b-dish-image"></div>
-            <h3>Wood-Fired Pizza</h3>
-            <p>Thin crust pizza with premium toppings</p>
-            <span className="t1b-price">$18</span>
-          </div>
-          <div className="t1b-dish">
-            <div className="t1b-dish-image"></div>
-            <h3>Osso Buco</h3>
-            <p>Braised veal shanks with risotto milanese</p>
-            <span className="t1b-price">$32</span>
-          </div>
-        </div>
-      </section>
-
       <section id="about" className="t1b-about">
         <div className="t1b-about-content">
           <h2 className="t1b-section-title">Our Story</h2>

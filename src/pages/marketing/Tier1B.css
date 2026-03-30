@@ -47,7 +47,9 @@
 /* Hero */
 .t1b-hero {
   min-height: 90vh;
-  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/marketing/tier1b/sample1b.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,10 +95,21 @@
   background-color: #C4A030;
 }
 
-/* Menu Section */
-.t1b-menu {
+/* Image Section */
+.t1b-image-section {
   background-color: #1A1A1A;
-  padding: 6rem 4rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t1b-showcase-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
 }
 
 .t1b-section-title {
@@ -106,48 +119,6 @@
   margin: 0 0 4rem 0;
   font-family: Georgia, serif;
   color: #D4AF37;
-}
-
-.t1b-menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.t1b-dish {
-  text-align: center;
-}
-
-.t1b-dish-image {
-  width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, #CD853F 0%, #8B4513 100%);
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.t1b-dish h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-  color: #fff;
-  font-family: Georgia, serif;
-}
-
-.t1b-dish p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-  margin: 0 0 0.75rem 0;
-}
-
-.t1b-price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #D4AF37;
-  font-family: Georgia, serif;
 }
 
 /* About Section */
@@ -249,18 +220,13 @@
     font-size: 1rem;
   }
 
-  .t1b-menu {
-    padding: 4rem 1.5rem;
+  .t1b-showcase-image {
+    max-height: 400px;
   }
 
   .t1b-section-title {
     font-size: 2rem;
     margin-bottom: 2.5rem;
-  }
-
-  .t1b-menu-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .t1b-about {

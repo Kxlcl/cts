@@ -3,10 +3,6 @@ import './Tier2B.css'
 function Tier2B() {
   return (
     <div className="t2b-page">
-        <header className="t2b-header">
-          <div className="t2b-logo">HealthGuard Insurance</div>
-        </header>
-
         <section className="t2b-hero">
           <div className="t2b-hero-content">
             <h1 className="t2b-hero-title">Healthcare Coverage<br />You Can Trust</h1>

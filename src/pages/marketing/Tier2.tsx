@@ -3,10 +3,6 @@ import './Tier2.css'
 function Tier2() {
   return (
     <div className="tier2-page">
-        <header className="tier2-header">
-          <div className="tier2-logo">EcoVolt Energy</div>
-        </header>
-
         <section className="tier2-hero">
           <div className="tier2-hero-text">
             <h1>Powering a<br /><span>Sustainable Future</span></h1>
@@ -51,20 +47,58 @@ function Tier2() {
           </div>
         </section>
 
-        <section id="mission" className="tier2-mission">
-          <div className="tier2-mission-content">
-            <h2>OUR MISSION</h2>
-            <p>
-              We believe everyone deserves access to clean, affordable energy. Our mission is to accelerate
-              the transition to renewable power by making sustainable energy solutions accessible to homes
-              and businesses everywhere.
-            </p>
-            <p>
-              Since 2015, we've been installing solar panels, wind turbines, and energy storage systems
-              that help reduce carbon emissions while saving our customers money on their energy bills.
-            </p>
+        <section id="team" className="tier2-team">
+          <h2>MEET THE TEAM</h2>
+          <div className="tier2-team-grid">
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Sarah Mitchell</h3>
+              <p className="tier2-team-role">CEO & Founder</p>
+              <p className="tier2-team-bio">Leading EcoVolt's vision for a sustainable energy future with 15+ years of renewable energy expertise.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>David Chen</h3>
+              <p className="tier2-team-role">Chief Technology Officer</p>
+              <p className="tier2-team-bio">Innovating cutting-edge solar and energy storage solutions to maximize efficiency and performance.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Emily Rodriguez</h3>
+              <p className="tier2-team-role">Head of Operations</p>
+              <p className="tier2-team-bio">Ensuring seamless project execution and customer satisfaction across all installations.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Michael Johnson</h3>
+              <p className="tier2-team-role">Lead Engineer</p>
+              <p className="tier2-team-bio">Designing custom renewable energy systems tailored to each client's unique needs and goals.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Lisa Anderson</h3>
+              <p className="tier2-team-role">Customer Success Manager</p>
+              <p className="tier2-team-bio">Building lasting relationships and ensuring every client achieves their sustainability objectives.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>James Park</h3>
+              <p className="tier2-team-role">Installation Director</p>
+              <p className="tier2-team-bio">Overseeing all field operations with a commitment to safety, quality, and timely completion.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Amanda Foster</h3>
+              <p className="tier2-team-role">Finance Director</p>
+              <p className="tier2-team-bio">Making renewable energy affordable through innovative financing and incentive programs.</p>
+            </div>
+            <div className="tier2-team-card">
+              <div className="tier2-team-photo"></div>
+              <h3>Ryan Williams</h3>
+              <p className="tier2-team-role">Marketing Director</p>
+              <p className="tier2-team-bio">Spreading awareness about sustainable energy and connecting communities with clean power solutions.</p>
+            </div>
           </div>
-          <div className="tier2-mission-image"></div>
         </section>
 
         <section id="contact" className="tier2-contact">

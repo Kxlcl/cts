@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
 .tier2-page {
   background-color: #fff;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 /* Header */
@@ -45,8 +47,10 @@
 
 /* Hero */
 .tier2-hero {
-  min-height: 90vh;
-  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/marketing/tier2/sample2page1.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   padding: 0 6rem;
@@ -175,42 +179,71 @@
   font-weight: 500;
 }
 
-/* Mission Section */
-.tier2-mission {
+/* Team Section */
+.tier2-team {
   background-color: #F1F8F4;
   padding: 6rem 4rem;
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.tier2-mission-content {
-  flex: 1;
-}
-
-.tier2-mission-content h2 {
+.tier2-team h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #2E7D32;
-  margin: 0 0 2rem 0;
-  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 4rem 0;
+  letter-spacing: 2px;
 }
 
-.tier2-mission-content p {
-  font-size: 1.05rem;
-  color: #444;
-  line-height: 1.8;
-  margin: 0 0 1.5rem 0;
+.tier2-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.tier2-mission-image {
-  flex-shrink: 0;
-  width: 450px;
-  height: 350px;
-  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+.tier2-team-card {
+  background-color: #fff;
   border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tier2-team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+}
+
+.tier2-team-photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.25rem auto;
+  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+  border-radius: 50%;
+}
+
+.tier2-team-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2E7D32;
+  margin: 0 0 0.5rem 0;
+}
+
+.tier2-team-role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 1rem 0;
+}
+
+.tier2-team-bio {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Contact Section */
@@ -288,6 +321,12 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .tier2-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .tier2-header {
     padding: 1rem 1.5rem;
@@ -299,7 +338,7 @@
 
   .tier2-hero {
     padding: 4rem 2rem;
-    min-height: 70vh;
+    min-height: 80vh;
   }
 
   .tier2-hero-text h1 {
@@ -334,19 +373,18 @@
     font-size: 2.5rem;
   }
 
-  .tier2-mission {
-    flex-direction: column;
+  .tier2-team {
     padding: 4rem 1.5rem;
-    gap: 2.5rem;
   }
 
-  .tier2-mission-content h2 {
+  .tier2-team h2 {
     font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
 
-  .tier2-mission-image {
-    width: 100%;
-    height: 250px;
+  .tier2-team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .tier2-contact {

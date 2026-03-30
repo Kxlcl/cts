@@ -170,7 +170,8 @@ function MarketingHome() {
                       <p>A basic, minimally functional website that showcases your brand and promotes a clear call to action.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>SAMPLE 1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1b')}>2</button>
                     </div>
                   </div>
                 </div>
@@ -182,7 +183,8 @@ function MarketingHome() {
                       <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
                     </div>
                     <div className="sample-buttons">
-                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2b')}>2</button>
                     </div>
                   </div>
                 </div>
@@ -194,7 +196,8 @@ function MarketingHome() {
                       <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
                     </div>
                     <div className="sample-buttons">
-                      <p style={{ color: '#fff', fontSize: '0.9rem', margin: '0' }}>Coming Soon</p>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3b')}>2</button>
                     </div>
                   </div>
                 </div>
