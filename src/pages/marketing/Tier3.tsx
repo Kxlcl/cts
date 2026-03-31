@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Tier3.css'
 
 type Page = 'home' | 'portfolio' | 'about' | 'exhibitions' | 'contact'
 
 function Tier3() {
+  const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState<Page>('home')
 
   const renderPage = () => {
@@ -189,6 +191,12 @@ function Tier3() {
 
   return (
     <div className="tier3-page">
+      <div className="sample-navigation-header">
+        <button className="back-to-marketing-btn" onClick={() => navigate('/?marketing=true')}>
+          ← Back to Home
+        </button>
+        <h2 className="sample-page-title">TIER 3 SAMPLE 1</h2>
+      </div>
       <header className="tier3-header">
         <div className="tier3-logo" onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
           IM

@@ -1,8 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import './Tier2.css'
 
 function Tier2() {
+  const navigate = useNavigate()
+
   return (
     <div className="tier2-page">
+        <div className="sample-navigation-header">
+          <button className="back-to-marketing-btn" onClick={() => navigate('/?marketing=true')}>
+            ← Back to Home
+          </button>
+          <h2 className="sample-page-title">TIER 2 SAMPLE 1</h2>
+        </div>
         <section className="tier2-hero">
           <div className="tier2-hero-text">
             <h1>Powering a<br /><span>Sustainable Future</span></h1>

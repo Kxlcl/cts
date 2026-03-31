@@ -1,26 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './MarketingHome.css'
 import Footer from '../../components/Footer'
-import Tier1 from './Tier1'
-import Tier1B from './Tier1B'
-import Tier2 from './Tier2'
-import Tier2B from './Tier2B'
-import Tier3 from './Tier3'
-import Tier3B from './Tier3B'
-
-type SampleKey = 'tier1' | 'tier1b' | 'tier2' | 'tier2b' | 'tier3' | 'tier3b'
-
-const SAMPLE_COMPONENTS: Record<SampleKey, React.ComponentType> = {
-  tier1: Tier1,
-  tier1b: Tier1B,
-  tier2: Tier2,
-  tier2b: Tier2B,
-  tier3: Tier3,
-  tier3b: Tier3B,
-}
 
 function MarketingHome() {
-  const [openSample, setOpenSample] = useState<SampleKey | null>(null)
+  const navigate = useNavigate()
   const [menuOpen, setMenuOpen] = useState(false)
 
   const [formData, setFormData] = useState({
@@ -101,21 +85,6 @@ function MarketingHome() {
     }
   }, [])
 
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpenSample(null)
-    }
-    if (openSample) {
-      document.body.style.overflow = 'hidden'
-      window.addEventListener('keydown', handleKey)
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-      window.removeEventListener('keydown', handleKey)
-    }
-  }, [openSample])
 
   return (
     <>
@@ -170,8 +139,8 @@ function MarketingHome() {
                       <p>A basic, minimally functional website that showcases your brand and promotes a clear call to action.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1')}>1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier1b')}>2</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier1?marketing=true')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier1b?marketing=true')}>2</button>
                     </div>
                   </div>
                 </div>
@@ -183,8 +152,8 @@ function MarketingHome() {
                       <p>A comprehensive single-page website with multiple sections, perfect for presenting your complete story in one scrollable experience.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2')}>1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier2b')}>2</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier2?marketing=true')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier2b?marketing=true')}>2</button>
                     </div>
                   </div>
                 </div>
@@ -196,8 +165,8 @@ function MarketingHome() {
                       <p>A multi-page website with advanced features, custom functionality, and professional design for established businesses.</p>
                     </div>
                     <div className="sample-buttons">
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3')}>1</button>
-                      <button className="sample-direct-btn" onClick={() => setOpenSample('tier3b')}>2</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier3?marketing=true')}>1</button>
+                      <button className="sample-direct-btn" onClick={() => navigate('/tier3b?marketing=true')}>2</button>
                     </div>
                   </div>
                 </div>
@@ -304,19 +273,6 @@ function MarketingHome() {
         </div>
       </div>
 
-      {openSample && (() => {
-        const SampleComponent = SAMPLE_COMPONENTS[openSample]
-        return (
-          <div className="sample-modal-overlay" onClick={() => setOpenSample(null)}>
-            <div className="sample-modal-content" onClick={e => e.stopPropagation()}>
-              <button className="sample-modal-close" onClick={() => setOpenSample(null)}>✕ CLOSE</button>
-              <div className="sample-modal-body">
-                <SampleComponent />
-              </div>
-            </div>
-          </div>
-        )
-      })()}
     </>
   )
 }

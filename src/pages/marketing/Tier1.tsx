@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Tier1.css'
 
 function Tier1() {
+  const navigate = useNavigate()
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -24,6 +26,12 @@ function Tier1() {
 
   return (
     <div className="tier1-page">
+      <div className="sample-navigation-header">
+        <button className="back-to-marketing-btn" onClick={() => navigate('/?marketing=true')}>
+          ← Back to Home
+        </button>
+        <h2 className="sample-page-title">TIER 1 SAMPLE 1</h2>
+      </div>
       <header className="tier1-header">
         <div className="tier1-logo">
           <span className="tier1-logo-icon">▼</span>

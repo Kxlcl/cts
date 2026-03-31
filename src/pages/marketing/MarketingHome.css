@@ -979,3 +979,85 @@
   flex: 1;
   scrollbar-width: thin;
 }
+
+/* Sample Page Navigation Header */
+.sample-navigation-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #333;
+  z-index: 10000;
+  min-height: 60px;
+}
+
+/* Ensure sample pages don't have conflicting positioning */
+.tier1-page,
+.t1b-page,
+.tier2-page,
+.t2b-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* Tier3 and Tier3B have their own sticky/fixed headers, so no padding needed */
+.tier3-page,
+.t3b-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 0 !important;
+}
+
+.back-to-marketing-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.6rem 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.back-to-marketing-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.sample-page-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .sample-navigation-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .back-to-marketing-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .sample-page-title {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+}

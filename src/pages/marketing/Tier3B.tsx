@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Tier3B.css'
 
 type Page = 'home' | 'collections' | 'about' | 'appointments' | 'contact'
 
 function Tier3B() {
+  const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState<Page>('home')
 
   const renderPage = () => {
@@ -227,6 +229,12 @@ function Tier3B() {
 
   return (
     <div className="t3b-page">
+      <div className="sample-navigation-header">
+        <button className="back-to-marketing-btn" onClick={() => navigate('/?marketing=true')}>
+          ← Back to Home
+        </button>
+        <h2 className="sample-page-title">TIER 3 SAMPLE 2</h2>
+      </div>
       <header className="t3b-header">
         <div className="t3b-logo" onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
           BELLA ROSA BRIDAL

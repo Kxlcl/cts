@@ -4,8 +4,11 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import MarketingHome from './pages/marketing/MarketingHome'
 import Tier1 from './pages/marketing/Tier1'
+import Tier1B from './pages/marketing/Tier1B'
 import Tier2 from './pages/marketing/Tier2'
+import Tier2B from './pages/marketing/Tier2B'
 import Tier3 from './pages/marketing/Tier3'
+import Tier3B from './pages/marketing/Tier3B'
 import './App.css'
 
 function App() {
@@ -25,8 +28,11 @@ function App() {
           <Routes>
             <Route path="/" element={<MarketingHome />} />
             <Route path="/tier1" element={<Tier1 />} />
+            <Route path="/tier1b" element={<Tier1B />} />
             <Route path="/tier2" element={<Tier2 />} />
+            <Route path="/tier2b" element={<Tier2B />} />
             <Route path="/tier3" element={<Tier3 />} />
+            <Route path="/tier3b" element={<Tier3B />} />
           </Routes>
         ) : (
           // Main site routes

@@ -1,8 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import './Tier1B.css'
 
 function Tier1B() {
+  const navigate = useNavigate()
+
   return (
     <div className="t1b-page">
+      <div className="sample-navigation-header">
+        <button className="back-to-marketing-btn" onClick={() => navigate('/?marketing=true')}>
+          ← Back to Home
+        </button>
+        <h2 className="sample-page-title">TIER 1 SAMPLE 2</h2>
+      </div>
       <header className="t1b-header">
         <div className="t1b-logo">BELLA CUCINA</div>
       </header>
