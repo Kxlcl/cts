@@ -11,7 +11,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 35%;
+  width: 30%;
   height: 100vh;
   background-color: #fff;
   background-image: linear-gradient(rgba(230, 242, 247, 0.9), rgba(230, 242, 247, 0.9)), url('/images/marketing/marketing-home/marketing_hero.gif');
@@ -107,8 +107,8 @@
 }
 
 .marketing-split-right {
-  margin-left: 35%;
-  width: 65%;
+  margin-left: 30%;
+  width: 70%;
   background-color: #f0f4f7;
   min-height: 100vh;
   position: relative;
@@ -553,7 +553,7 @@
 .sample-buttons {
   display: flex;
   gap: 0.5rem;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .sample-direct-btn {
@@ -565,7 +565,7 @@
   background-color: #FFCC7A;
   border: none;
   border-radius: 50px;
-  padding: 0.4rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
