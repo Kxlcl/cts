@@ -206,7 +206,7 @@ function MarketingHome() {
                   <div className="tier-card-overlay">
                     <div className="tier-card-overlay-content">
                       <h3>Custom Tier</h3>
-                      <p>Contact us for more info</p>
+                      <p>Contact us for more info.</p>
                     </div>
                   </div>
                 </div>
