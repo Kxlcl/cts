@@ -7,6 +7,7 @@ type Page = 'home' | 'portfolio' | 'about' | 'exhibitions' | 'contact'
 function Tier3() {
   const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState<Page>('home')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const renderPage = () => {
     switch (currentPage) {
@@ -201,13 +202,23 @@ function Tier3() {
         <div className="tier3-logo" onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
           IM
         </div>
-        <nav className="tier3-nav">
-          <a onClick={() => setCurrentPage('portfolio')} className={currentPage === 'portfolio' ? 'active' : ''}>Portfolio</a>
-          <a onClick={() => setCurrentPage('about')} className={currentPage === 'about' ? 'active' : ''}>About</a>
-          <a onClick={() => setCurrentPage('exhibitions')} className={currentPage === 'exhibitions' ? 'active' : ''}>Exhibitions</a>
-          <a onClick={() => setCurrentPage('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
+        <button
+          className={`tier3-hamburger ${menuOpen ? 'tier3-hamburger-open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={`tier3-nav ${menuOpen ? 'tier3-nav-open' : ''}`}>
+          <a onClick={() => { setCurrentPage('portfolio'); setMenuOpen(false); }} className={currentPage === 'portfolio' ? 'active' : ''}>Portfolio</a>
+          <a onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className={currentPage === 'about' ? 'active' : ''}>About</a>
+          <a onClick={() => { setCurrentPage('exhibitions'); setMenuOpen(false); }} className={currentPage === 'exhibitions' ? 'active' : ''}>Exhibitions</a>
+          <a onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
         </nav>
       </header>
+      {menuOpen && <div className="tier3-menu-backdrop" onClick={() => setMenuOpen(false)}></div>}
 
       {renderPage()}
 

@@ -7,6 +7,7 @@ type Page = 'home' | 'collections' | 'about' | 'appointments' | 'contact'
 function Tier3B() {
   const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState<Page>('home')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const renderPage = () => {
     switch (currentPage) {
@@ -239,13 +240,23 @@ function Tier3B() {
         <div className="t3b-logo" onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
           BELLA ROSA BRIDAL
         </div>
-        <nav className="t3b-nav">
-          <a onClick={() => setCurrentPage('collections')} className={currentPage === 'collections' ? 'active' : ''}>Collections</a>
-          <a onClick={() => setCurrentPage('about')} className={currentPage === 'about' ? 'active' : ''}>About</a>
-          <a onClick={() => setCurrentPage('appointments')} className={currentPage === 'appointments' ? 'active' : ''}>Appointments</a>
-          <a onClick={() => setCurrentPage('contact')} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
+        <button
+          className={`t3b-hamburger ${menuOpen ? 't3b-hamburger-open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={`t3b-nav ${menuOpen ? 't3b-nav-open' : ''}`}>
+          <a onClick={() => { setCurrentPage('collections'); setMenuOpen(false); }} className={currentPage === 'collections' ? 'active' : ''}>Collections</a>
+          <a onClick={() => { setCurrentPage('about'); setMenuOpen(false); }} className={currentPage === 'about' ? 'active' : ''}>About</a>
+          <a onClick={() => { setCurrentPage('appointments'); setMenuOpen(false); }} className={currentPage === 'appointments' ? 'active' : ''}>Appointments</a>
+          <a onClick={() => { setCurrentPage('contact'); setMenuOpen(false); }} className={currentPage === 'contact' ? 'active' : ''}>Contact</a>
         </nav>
       </header>
+      {menuOpen && <div className="t3b-menu-backdrop" onClick={() => setMenuOpen(false)}></div>}
 
       {renderPage()}
 

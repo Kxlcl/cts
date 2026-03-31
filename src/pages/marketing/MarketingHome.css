@@ -1049,15 +1049,37 @@
 @media (max-width: 768px) {
   .sample-navigation-header {
     padding: 0.75rem 1rem;
+    min-height: 50px;
   }
 
   .back-to-marketing-btn {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem;
+    letter-spacing: 0.3px;
   }
 
   .sample-page-title {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     letter-spacing: 1px;
+  }
+
+  /* Adjust padding for mobile on sample pages */
+  .tier1-page,
+  .t1b-page,
+  .tier2-page,
+  .t2b-page {
+    padding-top: 50px;
+  }
+
+  /* Adjust Tier3 header position for mobile */
+  .tier3-header {
+    top: 50px;
+    padding: 1.5rem 2rem;
+  }
+
+  /* Adjust Tier3B header position for mobile */
+  .t3b-header {
+    top: 50px;
+    padding: 1.5rem 2rem;
   }
 }
