@@ -836,23 +836,34 @@
 
   .tier-card {
     padding: 2rem 1.5rem;
-    min-height: 180px;
+    min-height: 250px;
   }
 
   .tier-card > h3 {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
   }
 
   .tier-card-overlay {
     padding: 1.5rem 1.25rem;
   }
 
-  .tier-card-overlay h3 {
-    font-size: 1.4rem;
+  .tier-card-overlay-content h3 {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    margin-bottom: 0.75rem;
   }
 
-  .tier-card-overlay p {
-    font-size: 0.8rem;
+  .tier-card-overlay-content p {
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    line-height: 1.5;
+  }
+
+  .sample-buttons {
+    margin-top: 1rem;
+  }
+
+  .sample-direct-btn {
+    font-size: clamp(0.6rem, 2vw, 0.7rem);
+    padding: 0.6rem 0.9rem;
   }
 
   .portfolio-container {
@@ -1008,7 +1019,6 @@
   padding-top: 60px;
 }
 
-/* Tier3 and Tier3B have their own sticky/fixed headers, so no padding needed */
 .tier3-page,
 .t3b-page {
   position: relative;
@@ -1063,7 +1073,6 @@
     letter-spacing: 1px;
   }
 
-  /* Adjust padding for mobile on sample pages */
   .tier1-page,
   .t1b-page,
   .tier2-page,
@@ -1071,15 +1080,44 @@
     padding-top: 50px;
   }
 
-  /* Adjust Tier3 header position for mobile */
   .tier3-header {
     top: 50px;
     padding: 1.5rem 2rem;
   }
 
-  /* Adjust Tier3B header position for mobile */
   .t3b-header {
     top: 50px;
     padding: 1.5rem 2rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .tier-card {
+    padding: 1.5rem 1rem;
+    min-height: 160px;
+  }
+
+  .tier-card > h3 {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+  }
+
+  .tier-card-overlay {
+    padding: 1.25rem 1rem;
+  }
+
+  .tier-card-overlay-content h3 {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .tier-card-overlay-content p {
+    font-size: clamp(0.7rem, 3vw, 0.85rem);
+    line-height: 1.4;
+  }
+
+  .sample-direct-btn {
+    font-size: clamp(0.55rem, 2.5vw, 0.65rem);
+    padding: 0.55rem 0.8rem;
   }
 }

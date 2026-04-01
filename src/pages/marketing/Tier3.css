@@ -718,8 +718,12 @@
 /* Responsive */
 @media (max-width: 768px) {
   .tier3-header {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     top: 50px;
+  }
+
+  .tier3-logo {
+    font-size: 1.5rem;
   }
 
   .tier3-hamburger {
@@ -758,19 +762,51 @@
   }
 
   .tier3-hero {
-    padding: 6rem 2rem;
+    padding: 5rem 1.5rem;
+    min-height: 85vh;
   }
 
   .tier3-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+  }
+
+  .tier3-hero-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+  .tier3-hero-desc {
+    font-size: 1rem;
+  }
+
+  .tier3-cta {
+    padding: 1rem 2.5rem;
+    font-size: 0.7rem;
+  }
+
+  .tier3-section-label {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    padding-left: 2rem;
+  }
+
+  .tier3-section-label::before {
+    width: 1.5rem;
   }
 
   .tier3-portfolio {
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .tier3-portfolio h2 {
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
   }
 
   .tier3-portfolio-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .tier3-artwork:nth-child(1),
@@ -784,11 +820,19 @@
   }
 
   .tier3-artwork .tier3-artwork-image {
-    height: 400px !important;
+    height: 350px !important;
+  }
+
+  .tier3-artwork-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .tier3-artwork-info p {
+    font-size: 0.75rem;
   }
 
   .tier3-about {
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
   }
 
   .tier3-about-content {
@@ -796,47 +840,198 @@
     gap: 3rem;
   }
 
+  .tier3-about-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .tier3-about-text p {
+    font-size: 1rem;
+  }
+
   .tier3-about-image {
     transform: rotate(0deg);
     margin-top: 0;
+    height: 400px;
+  }
+
+  .tier3-artist-statement {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .tier3-artist-statement h3 {
+    font-size: 1.1rem;
+  }
+
+  .tier3-artist-statement p {
+    font-size: 1rem;
   }
 
   .tier3-exhibitions {
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .tier3-exhibitions h2 {
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
   }
 
   .tier3-timeline::before {
-    left: 80px;
+    left: 50px;
   }
 
   .tier3-exhibition {
-    grid-template-columns: 80px 1fr;
-    gap: 2rem;
+    grid-template-columns: 50px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
 
   .tier3-exhibition::before {
-    left: 75px;
+    left: 45px;
+    top: 2.5rem;
+  }
+
+  .tier3-exhibition-year {
+    font-size: 1.8rem;
+  }
+
+  .tier3-exhibition-details h3 {
+    font-size: 1.5rem;
+  }
+
+  .tier3-exhibition-type {
+    font-size: 0.7rem;
+  }
+
+  .tier3-exhibition-details p {
+    font-size: 0.9rem;
   }
 
   .tier3-contact {
-    padding: 4rem 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .tier3-contact h2 {
+    font-size: 2.5rem;
+  }
+
+  .tier3-contact-intro {
+    font-size: 1rem;
   }
 
   .tier3-form-row {
     grid-template-columns: 1fr;
   }
 
+  .tier3-contact-form input,
+  .tier3-contact-form textarea {
+    font-size: 0.95rem;
+    padding: 1rem 0;
+  }
+
+  .tier3-contact-form button {
+    padding: 1.1rem 2.5rem;
+    font-size: 0.7rem;
+  }
+
   .tier3-contact-info {
     flex-direction: column;
     gap: 2rem;
+    padding-top: 2rem;
   }
 
   .tier3-footer {
-    padding: 3rem 2rem 1.5rem 2rem;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
   }
 
   .tier3-footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin: 0 auto 2rem auto;
+  }
+
+  .tier3-footer-section h4 {
+    font-size: 0.7rem;
+  }
+
+  .tier3-footer-section p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .tier3-header {
+    padding: 1rem 1rem;
+  }
+
+  .tier3-logo {
+    font-size: 1.3rem;
+  }
+
+  .tier3-hero {
+    padding: 4rem 1rem;
+  }
+
+  .tier3-hero h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .tier3-hero-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+  }
+
+  .tier3-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .tier3-cta {
+    padding: 0.9rem 2rem;
+    font-size: 0.65rem;
+  }
+
+  .tier3-portfolio,
+  .tier3-about,
+  .tier3-exhibitions,
+  .tier3-contact {
+    padding: 3rem 1rem;
+  }
+
+  .tier3-portfolio h2,
+  .tier3-about-text h2,
+  .tier3-exhibitions h2,
+  .tier3-contact h2 {
+    font-size: 2rem;
+  }
+
+  .tier3-artwork .tier3-artwork-image {
+    height: 300px !important;
+  }
+
+  .tier3-exhibition {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+  }
+
+  .tier3-timeline::before {
+    left: 40px;
+  }
+
+  .tier3-exhibition::before {
+    left: 36px;
+  }
+
+  .tier3-exhibition-year {
+    font-size: 1.5rem;
+  }
+
+  .tier3-exhibition-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .tier3-footer {
+    padding: 2.5rem 1rem 1rem 1rem;
   }
 }
