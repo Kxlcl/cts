@@ -10,7 +10,7 @@
 
 /* Header */
 .tier3-header {
-  padding: 2.5rem 5rem;
+  padding: 1rem 5rem;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
@@ -718,7 +718,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .tier3-header {
-    padding: 1.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     top: 50px;
   }
 
@@ -732,10 +732,10 @@
 
   .tier3-nav {
     position: fixed;
-    top: 110px;
+    top: 18vh;
     right: -100%;
     width: 250px;
-    height: calc(100vh - 110px);
+    height: 82vh;
     background: rgba(13, 13, 13, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
