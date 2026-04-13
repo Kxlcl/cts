@@ -991,7 +991,6 @@
   scrollbar-width: thin;
 }
 
-/* Sample Page Navigation Header */
 .sample-navigation-header {
   position: fixed;
   top: 0;
@@ -1008,7 +1007,6 @@
   min-height: 60px;
 }
 
-/* Ensure sample pages don't have conflicting positioning */
 .tier1-page,
 .t1b-page,
 .tier2-page,
@@ -1091,7 +1089,6 @@
   }
 }
 
-/* Extra small mobile devices */
 @media (max-width: 480px) {
   .tier-card {
     padding: 1.5rem 1rem;

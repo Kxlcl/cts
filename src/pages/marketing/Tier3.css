@@ -71,7 +71,6 @@
   width: 100%;
 }
 
-/* Hamburger Menu */
 .tier3-hamburger {
   display: none;
   flex-direction: column;
@@ -118,7 +117,6 @@
   z-index: 98;
 }
 
-/* Hero Section */
 .tier3-hero {
   min-height: 100vh;
   background:
@@ -222,7 +220,6 @@
   left: 100%;
 }
 
-/* Section Label */
 .tier3-section-label {
   font-size: 0.7rem;
   font-weight: 500;
@@ -245,7 +242,6 @@
   background: linear-gradient(90deg, #FF6B9D 0%, transparent 100%);
 }
 
-/* Portfolio Section */
 .tier3-portfolio {
   background-color: #0D0D0D;
   padding: 8rem 5rem;
@@ -374,7 +370,6 @@
   text-transform: uppercase;
 }
 
-/* About Section */
 .tier3-about {
   background: linear-gradient(180deg, #0D0D0D 0%, #1A1A1A 100%);
   padding: 8rem 5rem;
@@ -463,7 +458,6 @@
   font-size: 1.1rem;
 }
 
-/* Exhibitions Section */
 .tier3-exhibitions {
   background-color: #0D0D0D;
   padding: 8rem 5rem;
@@ -551,7 +545,6 @@
   font-style: italic;
 }
 
-/* Contact Section */
 .tier3-contact {
   background: #1A1A1A;
   padding: 8rem 5rem;
@@ -959,7 +952,6 @@
   }
 }
 
-/* Extra small mobile devices */
 @media (max-width: 480px) {
   .tier3-header {
     padding: 1rem 1rem;

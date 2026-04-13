@@ -12,11 +12,9 @@ import Tier3B from './pages/marketing/Tier3B'
 import './App.css'
 
 function App() {
-  // Detect subdomain
   const hostname = window.location.hostname
   const searchParams = new URLSearchParams(window.location.search)
 
-  // Check for marketing subdomain OR query parameter for local testing
   const isMarketing = hostname.startsWith('marketing.') ||
                       searchParams.get('marketing') === 'true'
 
@@ -24,7 +22,6 @@ function App() {
     <Router>
       <main>
         {isMarketing ? (
-          // Marketing subdomain routes
           <Routes>
             <Route path="/" element={<MarketingHome />} />
             <Route path="/tier1" element={<Tier1 />} />
@@ -35,7 +32,6 @@ function App() {
             <Route path="/tier3b" element={<Tier3B />} />
           </Routes>
         ) : (
-          // Main site routes
           <Routes>
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
